@@ -1,0 +1,45 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.lazy.IBk -K 1 -W 0 -A "weka.core.neighboursearch.LinearNNSearch -A \"weka.core.EuclideanDistance -R first-last\""
+Relation:     ad-weka.filters.unsupervised.attribute.StringToNominal-R1-3-weka.filters.unsupervised.attribute.StringToNominal-Rfirst-last-weka.filters.unsupervised.attribute.NumericToNominal-R4-last
+Instances:    3279
+Attributes:   1559
+              [list of attributes omitted]
+Test mode:    evaluate on training data
+
+=== Classifier model (full training set) ===
+
+IB1 instance-based classifier
+using 1 nearest neighbour(s) for classification
+
+
+Time taken to build model: 0 seconds
+
+=== Evaluation on training set ===
+
+Time taken to test model on training data: 18.88 seconds
+
+=== Summary ===
+
+Correctly Classified Instances        3276               99.9085 %
+Incorrectly Classified Instances         3                0.0915 %
+Kappa statistic                          0.9962
+Mean absolute error                      0.0015
+Root mean squared error                  0.0256
+Relative absolute error                  0.6387 %
+Root relative squared error              7.3744 %
+Total Number of Instances             3279     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.998    0.001    0.996      0.998    0.997      0.996    1.000     1.000     ad.
+                 0.999    0.002    1.000      0.999    0.999      0.996    1.000     1.000     nonad.
+Weighted Avg.    0.999    0.002    0.999      0.999    0.999      0.996    1.000     1.000     
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+  458    1 |    a = ad.
+    2 2818 |    b = nonad.
+

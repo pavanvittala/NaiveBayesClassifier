@@ -1,0 +1,964 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.J48 -C 0.25 -M 2
+Relation:     adult
+Instances:    32561
+Attributes:   15
+              age
+               workclass
+               fnlwgt
+               education
+               education-num
+               marital-status
+               occupation
+               relationship
+               race
+               sex
+               capital-gain
+               capital-loss
+               hours-per-week
+               native-country
+               salary
+Test mode:    evaluate on training data
+
+=== Classifier model (full training set) ===
+
+J48 pruned tree
+------------------
+
+ capital-gain <= 6849
+|    marital-status =  Never-married
+|   |    education-num <= 12
+|   |   |    capital-loss <= 2080:  <=50K (8238.0/88.0)
+|   |   |    capital-loss > 2080
+|   |   |   |    capital-loss <= 2377:  <=50K (18.0/2.0)
+|   |   |   |    capital-loss > 2377:  >50K (9.0)
+|   |    education-num > 12
+|   |   |    education-num <= 14:  <=50K (2121.0/189.0)
+|   |   |    education-num > 14
+|   |   |   |   age <= 32:  <=50K (63.0/6.0)
+|   |   |   |   age > 32
+|   |   |   |   |    capital-loss <= 653
+|   |   |   |   |   |    occupation =  Adm-clerical:  >50K (0.0)
+|   |   |   |   |   |    occupation =  Exec-managerial:  >50K (11.0/2.0)
+|   |   |   |   |   |    occupation =  Handlers-cleaners:  >50K (0.0)
+|   |   |   |   |   |    occupation =  Prof-specialty
+|   |   |   |   |   |   |    workclass =  State-gov:  <=50K (6.0/1.0)
+|   |   |   |   |   |   |    workclass =  Self-emp-not-inc:  >50K (13.0/4.0)
+|   |   |   |   |   |   |    workclass =  Private
+|   |   |   |   |   |   |   |   age <= 52
+|   |   |   |   |   |   |   |   |    hours-per-week <= 42:  >50K (12.0/2.0)
+|   |   |   |   |   |   |   |   |    hours-per-week > 42
+|   |   |   |   |   |   |   |   |   |    sex =  Male:  <=50K (6.0/1.0)
+|   |   |   |   |   |   |   |   |   |    sex =  Female:  >50K (5.0)
+|   |   |   |   |   |   |   |   age > 52:  <=50K (9.0/1.0)
+|   |   |   |   |   |   |    workclass =  Federal-gov:  >50K (5.0/1.0)
+|   |   |   |   |   |   |    workclass =  Local-gov:  <=50K (4.0/1.0)
+|   |   |   |   |   |   |    workclass =  ?:  >50K (0.0)
+|   |   |   |   |   |   |    workclass =  Self-emp-inc:  <=50K (1.0)
+|   |   |   |   |   |   |    workclass =  Without-pay:  >50K (0.0)
+|   |   |   |   |   |   |    workclass =  Never-worked:  >50K (0.0)
+|   |   |   |   |   |    occupation =  Other-service:  >50K (1.0)
+|   |   |   |   |   |    occupation =  Sales:  >50K (0.0)
+|   |   |   |   |   |    occupation =  Craft-repair:  >50K (1.0)
+|   |   |   |   |   |    occupation =  Transport-moving:  >50K (0.0)
+|   |   |   |   |   |    occupation =  Farming-fishing:  >50K (0.0)
+|   |   |   |   |   |    occupation =  Machine-op-inspct:  >50K (1.0)
+|   |   |   |   |   |    occupation =  Tech-support:  >50K (0.0)
+|   |   |   |   |   |    occupation =  ?:  <=50K (2.0/1.0)
+|   |   |   |   |   |    occupation =  Protective-serv:  >50K (0.0)
+|   |   |   |   |   |    occupation =  Armed-Forces:  >50K (0.0)
+|   |   |   |   |   |    occupation =  Priv-house-serv:  >50K (0.0)
+|   |   |   |   |    capital-loss > 653:  >50K (11.0)
+|    marital-status =  Married-civ-spouse
+|   |    capital-loss <= 1762
+|   |   |    education-num <= 12
+|   |   |   |    education-num <= 8
+|   |   |   |   |    capital-gain <= 3942:  <=50K (1606.0/149.0)
+|   |   |   |   |    capital-gain > 3942
+|   |   |   |   |   |    capital-gain <= 5060:  <=50K (15.0/3.0)
+|   |   |   |   |   |    capital-gain > 5060:  >50K (11.0)
+|   |   |   |    education-num > 8
+|   |   |   |   |    capital-gain <= 5060
+|   |   |   |   |   |    hours-per-week <= 34:  <=50K (777.0/111.0)
+|   |   |   |   |   |    hours-per-week > 34
+|   |   |   |   |   |   |   age <= 35:  <=50K (2505.0/532.0)
+|   |   |   |   |   |   |   age > 35
+|   |   |   |   |   |   |   |    capital-loss <= 1504
+|   |   |   |   |   |   |   |   |    occupation =  Adm-clerical
+|   |   |   |   |   |   |   |   |   |    workclass =  State-gov
+|   |   |   |   |   |   |   |   |   |   |   age <= 45:  <=50K (13.0/3.0)
+|   |   |   |   |   |   |   |   |   |   |   age > 45
+|   |   |   |   |   |   |   |   |   |   |   |   age <= 49:  >50K (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   age > 49:  <=50K (5.0/2.0)
+|   |   |   |   |   |   |   |   |   |    workclass =  Self-emp-not-inc:  >50K (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |    workclass =  Private
+|   |   |   |   |   |   |   |   |   |   |    sex =  Male
+|   |   |   |   |   |   |   |   |   |   |   |    hours-per-week <= 53
+|   |   |   |   |   |   |   |   |   |   |   |   |    hours-per-week <= 43:  <=50K (106.0/31.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |    hours-per-week > 43
+|   |   |   |   |   |   |   |   |   |   |   |   |   |    education =  Bachelors:  >50K (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |    education =  HS-grad
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |    fnlwgt <= 163847:  <=50K (10.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |    fnlwgt > 163847:  >50K (7.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |    education =  11th:  >50K (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |    education =  Masters:  >50K (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |    education =  9th:  >50K (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |    education =  Some-college
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   age <= 39:  <=50K (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   age > 39:  >50K (8.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |    education =  Assoc-acdm:  >50K (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |    education =  Assoc-voc:  >50K (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |    education =  7th-8th:  >50K (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |    education =  Doctorate:  >50K (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |    education =  Prof-school:  >50K (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |    education =  5th-6th:  >50K (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |    education =  10th:  >50K (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |    education =  1st-4th:  >50K (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |    education =  Preschool:  >50K (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |    education =  12th:  >50K (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |    hours-per-week > 53:  >50K (8.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |    sex =  Female
+|   |   |   |   |   |   |   |   |   |   |   |    education =  Bachelors:  >50K (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |    education =  HS-grad
+|   |   |   |   |   |   |   |   |   |   |   |   |    hours-per-week <= 52
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   age <= 50:  >50K (37.0/12.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   age > 50:  <=50K (15.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |    hours-per-week > 52:  <=50K (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |    education =  11th:  >50K (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |    education =  Masters:  >50K (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |    education =  9th:  >50K (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |    education =  Some-college
+|   |   |   |   |   |   |   |   |   |   |   |   |    fnlwgt <= 156526
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   age <= 44:  <=50K (5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   age > 44
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   age <= 46:  >50K (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   age > 46:  <=50K (7.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |    fnlwgt > 156526:  >50K (21.0/4.0)
+|   |   |   |   |   |   |   |   |   |   |   |    education =  Assoc-acdm:  >50K (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |    education =  Assoc-voc:  >50K (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |    education =  7th-8th:  >50K (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |    education =  Doctorate:  >50K (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |    education =  Prof-school:  >50K (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |    education =  5th-6th:  >50K (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |    education =  10th:  >50K (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |    education =  1st-4th:  >50K (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |    education =  Preschool:  >50K (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |    education =  12th:  >50K (0.0)
+|   |   |   |   |   |   |   |   |   |    workclass =  Federal-gov
+|   |   |   |   |   |   |   |   |   |   |    hours-per-week <= 39:  <=50K (4.0)
+|   |   |   |   |   |   |   |   |   |   |    hours-per-week > 39:  >50K (81.0/28.0)
+|   |   |   |   |   |   |   |   |   |    workclass =  Local-gov:  <=50K (27.0/11.0)
+|   |   |   |   |   |   |   |   |   |    workclass =  ?:  <=50K (0.0)
+|   |   |   |   |   |   |   |   |   |    workclass =  Self-emp-inc:  >50K (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |    workclass =  Without-pay:  <=50K (0.0)
+|   |   |   |   |   |   |   |   |   |    workclass =  Never-worked:  <=50K (0.0)
+|   |   |   |   |   |   |   |   |    occupation =  Exec-managerial
+|   |   |   |   |   |   |   |   |   |    race =  White
+|   |   |   |   |   |   |   |   |   |   |    workclass =  State-gov:  <=50K (17.0/6.0)
+|   |   |   |   |   |   |   |   |   |   |    workclass =  Self-emp-not-inc:  <=50K (89.0/29.0)
+|   |   |   |   |   |   |   |   |   |   |    workclass =  Private:  >50K (331.0/125.0)
+|   |   |   |   |   |   |   |   |   |   |    workclass =  Federal-gov:  >50K (16.0/3.0)
+|   |   |   |   |   |   |   |   |   |   |    workclass =  Local-gov:  >50K (42.0/20.0)
+|   |   |   |   |   |   |   |   |   |   |    workclass =  ?:  >50K (0.0)
+|   |   |   |   |   |   |   |   |   |   |    workclass =  Self-emp-inc:  >50K (98.0/35.0)
+|   |   |   |   |   |   |   |   |   |   |    workclass =  Without-pay:  >50K (0.0)
+|   |   |   |   |   |   |   |   |   |   |    workclass =  Never-worked:  >50K (0.0)
+|   |   |   |   |   |   |   |   |   |    race =  Black
+|   |   |   |   |   |   |   |   |   |   |    fnlwgt <= 209236:  >50K (10.0)
+|   |   |   |   |   |   |   |   |   |   |    fnlwgt > 209236
+|   |   |   |   |   |   |   |   |   |   |   |   age <= 45
+|   |   |   |   |   |   |   |   |   |   |   |   |    fnlwgt <= 275703:  <=50K (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |    fnlwgt > 275703:  >50K (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   age > 45:  <=50K (5.0)
+|   |   |   |   |   |   |   |   |   |    race =  Asian-Pac-Islander
+|   |   |   |   |   |   |   |   |   |   |    hours-per-week <= 47:  >50K (6.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |    hours-per-week > 47:  <=50K (9.0/1.0)
+|   |   |   |   |   |   |   |   |   |    race =  Amer-Indian-Eskimo:  <=50K (6.0)
+|   |   |   |   |   |   |   |   |   |    race =  Other:  >50K (0.0)
+|   |   |   |   |   |   |   |   |    occupation =  Handlers-cleaners:  <=50K (125.0/29.0)
+|   |   |   |   |   |   |   |   |    occupation =  Prof-specialty
+|   |   |   |   |   |   |   |   |   |    race =  White
+|   |   |   |   |   |   |   |   |   |   |    workclass =  State-gov
+|   |   |   |   |   |   |   |   |   |   |   |    fnlwgt <= 140854:  <=50K (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |    fnlwgt > 140854:  >50K (12.0/3.0)
+|   |   |   |   |   |   |   |   |   |   |    workclass =  Self-emp-not-inc
+|   |   |   |   |   |   |   |   |   |   |   |    relationship =  Not-in-family:  <=50K (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |    relationship =  Husband:  <=50K (11.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |    relationship =  Wife:  >50K (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |    relationship =  Own-child:  <=50K (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |    relationship =  Unmarried:  <=50K (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |    relationship =  Other-relative:  <=50K (0.0)
+|   |   |   |   |   |   |   |   |   |   |    workclass =  Private
+|   |   |   |   |   |   |   |   |   |   |   |    education =  Bachelors:  >50K (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |    education =  HS-grad:  <=50K (30.0/14.0)
+|   |   |   |   |   |   |   |   |   |   |   |    education =  11th:  >50K (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |    education =  Masters:  >50K (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |    education =  9th:  >50K (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |    education =  Some-college
+|   |   |   |   |   |   |   |   |   |   |   |   |    fnlwgt <= 111283:  <=50K (7.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |    fnlwgt > 111283:  >50K (56.0/23.0)
+|   |   |   |   |   |   |   |   |   |   |   |    education =  Assoc-acdm:  >50K (14.0/5.0)
+|   |   |   |   |   |   |   |   |   |   |   |    education =  Assoc-voc
+|   |   |   |   |   |   |   |   |   |   |   |   |    fnlwgt <= 249585:  >50K (14.0/3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |    fnlwgt > 249585:  <=50K (7.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |    education =  7th-8th:  >50K (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |    education =  Doctorate:  >50K (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |    education =  Prof-school:  >50K (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |    education =  5th-6th:  >50K (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |    education =  10th:  >50K (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |    education =  1st-4th:  >50K (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |    education =  Preschool:  >50K (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |    education =  12th:  >50K (0.0)
+|   |   |   |   |   |   |   |   |   |   |    workclass =  Federal-gov:  >50K (14.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |    workclass =  Local-gov:  <=50K (5.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |    workclass =  ?:  >50K (0.0)
+|   |   |   |   |   |   |   |   |   |   |    workclass =  Self-emp-inc
+|   |   |   |   |   |   |   |   |   |   |   |   age <= 53:  >50K (5.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   age > 53:  <=50K (2.0)
+|   |   |   |   |   |   |   |   |   |   |    workclass =  Without-pay:  >50K (0.0)
+|   |   |   |   |   |   |   |   |   |   |    workclass =  Never-worked:  >50K (0.0)
+|   |   |   |   |   |   |   |   |   |    race =  Black
+|   |   |   |   |   |   |   |   |   |   |    relationship =  Not-in-family:  <=50K (0.0)
+|   |   |   |   |   |   |   |   |   |   |    relationship =  Husband:  >50K (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |    relationship =  Wife:  <=50K (4.0)
+|   |   |   |   |   |   |   |   |   |   |    relationship =  Own-child:  <=50K (0.0)
+|   |   |   |   |   |   |   |   |   |   |    relationship =  Unmarried:  <=50K (0.0)
+|   |   |   |   |   |   |   |   |   |   |    relationship =  Other-relative:  <=50K (0.0)
+|   |   |   |   |   |   |   |   |   |    race =  Asian-Pac-Islander:  >50K (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |    race =  Amer-Indian-Eskimo:  <=50K (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |    race =  Other:  >50K (1.0)
+|   |   |   |   |   |   |   |   |    occupation =  Other-service:  <=50K (212.0/37.0)
+|   |   |   |   |   |   |   |   |    occupation =  Sales
+|   |   |   |   |   |   |   |   |   |    workclass =  State-gov:  <=50K (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |    workclass =  Self-emp-not-inc
+|   |   |   |   |   |   |   |   |   |   |    education-num <= 10
+|   |   |   |   |   |   |   |   |   |   |   |    hours-per-week <= 54:  <=50K (60.0/10.0)
+|   |   |   |   |   |   |   |   |   |   |   |    hours-per-week > 54
+|   |   |   |   |   |   |   |   |   |   |   |   |    hours-per-week <= 70
+|   |   |   |   |   |   |   |   |   |   |   |   |   |    fnlwgt <= 126513:  >50K (7.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |    fnlwgt > 126513:  <=50K (18.0/5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |    hours-per-week > 70:  >50K (6.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |    education-num > 10
+|   |   |   |   |   |   |   |   |   |   |   |    hours-per-week <= 55:  >50K (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |    hours-per-week > 55:  <=50K (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |    workclass =  Private
+|   |   |   |   |   |   |   |   |   |   |    education =  Bachelors:  <=50K (0.0)
+|   |   |   |   |   |   |   |   |   |   |    education =  HS-grad:  <=50K (175.0/67.0)
+|   |   |   |   |   |   |   |   |   |   |    education =  11th:  <=50K (0.0)
+|   |   |   |   |   |   |   |   |   |   |    education =  Masters:  <=50K (0.0)
+|   |   |   |   |   |   |   |   |   |   |    education =  9th:  <=50K (0.0)
+|   |   |   |   |   |   |   |   |   |   |    education =  Some-college
+|   |   |   |   |   |   |   |   |   |   |   |    capital-gain <= 1409:  >50K (146.0/63.0)
+|   |   |   |   |   |   |   |   |   |   |   |    capital-gain > 1409
+|   |   |   |   |   |   |   |   |   |   |   |   |    capital-gain <= 3103:  >50K (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |    capital-gain > 3103:  <=50K (5.0)
+|   |   |   |   |   |   |   |   |   |   |    education =  Assoc-acdm
+|   |   |   |   |   |   |   |   |   |   |   |    hours-per-week <= 53
+|   |   |   |   |   |   |   |   |   |   |   |   |    capital-gain <= 1506:  <=50K (11.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |    capital-gain > 1506:  >50K (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |    hours-per-week > 53:  >50K (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |    education =  Assoc-voc:  <=50K (19.0/9.0)
+|   |   |   |   |   |   |   |   |   |   |    education =  7th-8th:  <=50K (0.0)
+|   |   |   |   |   |   |   |   |   |   |    education =  Doctorate:  <=50K (0.0)
+|   |   |   |   |   |   |   |   |   |   |    education =  Prof-school:  <=50K (0.0)
+|   |   |   |   |   |   |   |   |   |   |    education =  5th-6th:  <=50K (0.0)
+|   |   |   |   |   |   |   |   |   |   |    education =  10th:  <=50K (0.0)
+|   |   |   |   |   |   |   |   |   |   |    education =  1st-4th:  <=50K (0.0)
+|   |   |   |   |   |   |   |   |   |   |    education =  Preschool:  <=50K (0.0)
+|   |   |   |   |   |   |   |   |   |   |    education =  12th:  <=50K (0.0)
+|   |   |   |   |   |   |   |   |   |    workclass =  Federal-gov:  >50K (1.0)
+|   |   |   |   |   |   |   |   |   |    workclass =  Local-gov:  <=50K (1.0)
+|   |   |   |   |   |   |   |   |   |    workclass =  ?:  <=50K (0.0)
+|   |   |   |   |   |   |   |   |   |    workclass =  Self-emp-inc:  >50K (71.0/28.0)
+|   |   |   |   |   |   |   |   |   |    workclass =  Without-pay:  <=50K (0.0)
+|   |   |   |   |   |   |   |   |   |    workclass =  Never-worked:  <=50K (0.0)
+|   |   |   |   |   |   |   |   |    occupation =  Craft-repair
+|   |   |   |   |   |   |   |   |   |    workclass =  State-gov:  <=50K (22.0/6.0)
+|   |   |   |   |   |   |   |   |   |    workclass =  Self-emp-not-inc
+|   |   |   |   |   |   |   |   |   |   |   age <= 56:  <=50K (101.0/19.0)
+|   |   |   |   |   |   |   |   |   |   |   age > 56
+|   |   |   |   |   |   |   |   |   |   |   |   age <= 62:  >50K (12.0/4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   age > 62:  <=50K (4.0)
+|   |   |   |   |   |   |   |   |   |    workclass =  Private
+|   |   |   |   |   |   |   |   |   |   |    education-num <= 9:  <=50K (515.0/182.0)
+|   |   |   |   |   |   |   |   |   |   |    education-num > 9
+|   |   |   |   |   |   |   |   |   |   |   |   age <= 48
+|   |   |   |   |   |   |   |   |   |   |   |   |    hours-per-week <= 47
+|   |   |   |   |   |   |   |   |   |   |   |   |   |    capital-gain <= 1506:  <=50K (170.0/57.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |    capital-gain > 1506
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   age <= 42:  >50K (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   age > 42
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |    capital-gain <= 4101:  <=50K (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |    capital-gain > 4101:  >50K (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |    hours-per-week > 47:  >50K (54.0/20.0)
+|   |   |   |   |   |   |   |   |   |   |   |   age > 48
+|   |   |   |   |   |   |   |   |   |   |   |   |   age <= 59
+|   |   |   |   |   |   |   |   |   |   |   |   |   |    capital-gain <= 3942
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |    hours-per-week <= 52:  >50K (80.0/23.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |    hours-per-week > 52:  <=50K (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |    capital-gain > 3942:  <=50K (5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   age > 59:  <=50K (13.0/2.0)
+|   |   |   |   |   |   |   |   |   |    workclass =  Federal-gov
+|   |   |   |   |   |   |   |   |   |   |    education =  Bachelors:  >50K (0.0)
+|   |   |   |   |   |   |   |   |   |   |    education =  HS-grad:  >50K (12.0/3.0)
+|   |   |   |   |   |   |   |   |   |   |    education =  11th:  >50K (0.0)
+|   |   |   |   |   |   |   |   |   |   |    education =  Masters:  >50K (0.0)
+|   |   |   |   |   |   |   |   |   |   |    education =  9th:  >50K (0.0)
+|   |   |   |   |   |   |   |   |   |   |    education =  Some-college:  <=50K (11.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |    education =  Assoc-acdm:  >50K (2.0)
+|   |   |   |   |   |   |   |   |   |   |    education =  Assoc-voc:  >50K (5.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |    education =  7th-8th:  >50K (0.0)
+|   |   |   |   |   |   |   |   |   |   |    education =  Doctorate:  >50K (0.0)
+|   |   |   |   |   |   |   |   |   |   |    education =  Prof-school:  >50K (0.0)
+|   |   |   |   |   |   |   |   |   |   |    education =  5th-6th:  >50K (0.0)
+|   |   |   |   |   |   |   |   |   |   |    education =  10th:  >50K (0.0)
+|   |   |   |   |   |   |   |   |   |   |    education =  1st-4th:  >50K (0.0)
+|   |   |   |   |   |   |   |   |   |   |    education =  Preschool:  >50K (0.0)
+|   |   |   |   |   |   |   |   |   |   |    education =  12th:  >50K (0.0)
+|   |   |   |   |   |   |   |   |   |    workclass =  Local-gov:  <=50K (47.0/18.0)
+|   |   |   |   |   |   |   |   |   |    workclass =  ?:  <=50K (0.0)
+|   |   |   |   |   |   |   |   |   |    workclass =  Self-emp-inc
+|   |   |   |   |   |   |   |   |   |   |    education =  Bachelors:  <=50K (0.0)
+|   |   |   |   |   |   |   |   |   |   |    education =  HS-grad
+|   |   |   |   |   |   |   |   |   |   |   |    fnlwgt <= 116165:  <=50K (7.0)
+|   |   |   |   |   |   |   |   |   |   |   |    fnlwgt > 116165
+|   |   |   |   |   |   |   |   |   |   |   |   |    hours-per-week <= 49
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   age <= 51:  <=50K (6.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   age > 51:  >50K (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |    hours-per-week > 49:  >50K (4.0)
+|   |   |   |   |   |   |   |   |   |   |    education =  11th:  <=50K (0.0)
+|   |   |   |   |   |   |   |   |   |   |    education =  Masters:  <=50K (0.0)
+|   |   |   |   |   |   |   |   |   |   |    education =  9th:  <=50K (0.0)
+|   |   |   |   |   |   |   |   |   |   |    education =  Some-college
+|   |   |   |   |   |   |   |   |   |   |   |    hours-per-week <= 42:  <=50K (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |    hours-per-week > 42:  >50K (7.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |    education =  Assoc-acdm:  <=50K (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |    education =  Assoc-voc:  <=50K (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |    education =  7th-8th:  <=50K (0.0)
+|   |   |   |   |   |   |   |   |   |   |    education =  Doctorate:  <=50K (0.0)
+|   |   |   |   |   |   |   |   |   |   |    education =  Prof-school:  <=50K (0.0)
+|   |   |   |   |   |   |   |   |   |   |    education =  5th-6th:  <=50K (0.0)
+|   |   |   |   |   |   |   |   |   |   |    education =  10th:  <=50K (0.0)
+|   |   |   |   |   |   |   |   |   |   |    education =  1st-4th:  <=50K (0.0)
+|   |   |   |   |   |   |   |   |   |   |    education =  Preschool:  <=50K (0.0)
+|   |   |   |   |   |   |   |   |   |   |    education =  12th:  <=50K (0.0)
+|   |   |   |   |   |   |   |   |   |    workclass =  Without-pay:  <=50K (0.0)
+|   |   |   |   |   |   |   |   |   |    workclass =  Never-worked:  <=50K (0.0)
+|   |   |   |   |   |   |   |   |    occupation =  Transport-moving
+|   |   |   |   |   |   |   |   |   |    workclass =  State-gov
+|   |   |   |   |   |   |   |   |   |   |    hours-per-week <= 39:  >50K (2.0)
+|   |   |   |   |   |   |   |   |   |   |    hours-per-week > 39:  <=50K (8.0)
+|   |   |   |   |   |   |   |   |   |    workclass =  Self-emp-not-inc:  <=50K (40.0/14.0)
+|   |   |   |   |   |   |   |   |   |    workclass =  Private:  <=50K (289.0/97.0)
+|   |   |   |   |   |   |   |   |   |    workclass =  Federal-gov
+|   |   |   |   |   |   |   |   |   |   |    fnlwgt <= 177499:  <=50K (5.0)
+|   |   |   |   |   |   |   |   |   |   |    fnlwgt > 177499:  >50K (7.0/1.0)
+|   |   |   |   |   |   |   |   |   |    workclass =  Local-gov:  <=50K (37.0/6.0)
+|   |   |   |   |   |   |   |   |   |    workclass =  ?:  <=50K (0.0)
+|   |   |   |   |   |   |   |   |   |    workclass =  Self-emp-inc
+|   |   |   |   |   |   |   |   |   |   |    education =  Bachelors:  >50K (0.0)
+|   |   |   |   |   |   |   |   |   |   |    education =  HS-grad:  <=50K (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |    education =  11th:  >50K (0.0)
+|   |   |   |   |   |   |   |   |   |   |    education =  Masters:  >50K (0.0)
+|   |   |   |   |   |   |   |   |   |   |    education =  9th:  >50K (0.0)
+|   |   |   |   |   |   |   |   |   |   |    education =  Some-college:  >50K (5.0)
+|   |   |   |   |   |   |   |   |   |   |    education =  Assoc-acdm:  >50K (0.0)
+|   |   |   |   |   |   |   |   |   |   |    education =  Assoc-voc:  >50K (0.0)
+|   |   |   |   |   |   |   |   |   |   |    education =  7th-8th:  >50K (0.0)
+|   |   |   |   |   |   |   |   |   |   |    education =  Doctorate:  >50K (0.0)
+|   |   |   |   |   |   |   |   |   |   |    education =  Prof-school:  >50K (0.0)
+|   |   |   |   |   |   |   |   |   |   |    education =  5th-6th:  >50K (0.0)
+|   |   |   |   |   |   |   |   |   |   |    education =  10th:  >50K (0.0)
+|   |   |   |   |   |   |   |   |   |   |    education =  1st-4th:  >50K (0.0)
+|   |   |   |   |   |   |   |   |   |   |    education =  Preschool:  >50K (0.0)
+|   |   |   |   |   |   |   |   |   |   |    education =  12th:  >50K (0.0)
+|   |   |   |   |   |   |   |   |   |    workclass =  Without-pay:  <=50K (0.0)
+|   |   |   |   |   |   |   |   |   |    workclass =  Never-worked:  <=50K (0.0)
+|   |   |   |   |   |   |   |   |    occupation =  Farming-fishing:  <=50K (224.0/39.0)
+|   |   |   |   |   |   |   |   |    occupation =  Machine-op-inspct
+|   |   |   |   |   |   |   |   |   |    workclass =  State-gov:  >50K (4.0)
+|   |   |   |   |   |   |   |   |   |    workclass =  Self-emp-not-inc
+|   |   |   |   |   |   |   |   |   |   |    education-num <= 9:  <=50K (3.0)
+|   |   |   |   |   |   |   |   |   |   |    education-num > 9:  >50K (4.0)
+|   |   |   |   |   |   |   |   |   |    workclass =  Private
+|   |   |   |   |   |   |   |   |   |   |    capital-gain <= 2829:  <=50K (336.0/103.0)
+|   |   |   |   |   |   |   |   |   |   |    capital-gain > 2829
+|   |   |   |   |   |   |   |   |   |   |   |    capital-gain <= 3908:  <=50K (19.0/5.0)
+|   |   |   |   |   |   |   |   |   |   |   |    capital-gain > 3908:  >50K (8.0/1.0)
+|   |   |   |   |   |   |   |   |   |    workclass =  Federal-gov:  <=50K (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |    workclass =  Local-gov
+|   |   |   |   |   |   |   |   |   |   |    fnlwgt <= 205706:  <=50K (3.0)
+|   |   |   |   |   |   |   |   |   |   |    fnlwgt > 205706:  >50K (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |    workclass =  ?:  <=50K (0.0)
+|   |   |   |   |   |   |   |   |   |    workclass =  Self-emp-inc:  <=50K (3.0)
+|   |   |   |   |   |   |   |   |   |    workclass =  Without-pay:  <=50K (0.0)
+|   |   |   |   |   |   |   |   |   |    workclass =  Never-worked:  <=50K (0.0)
+|   |   |   |   |   |   |   |   |    occupation =  Tech-support
+|   |   |   |   |   |   |   |   |   |    fnlwgt <= 161857
+|   |   |   |   |   |   |   |   |   |   |    education =  Bachelors:  >50K (0.0)
+|   |   |   |   |   |   |   |   |   |   |    education =  HS-grad
+|   |   |   |   |   |   |   |   |   |   |   |   age <= 49:  <=50K (13.0/3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   age > 49:  >50K (8.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |    education =  11th:  >50K (0.0)
+|   |   |   |   |   |   |   |   |   |   |    education =  Masters:  >50K (0.0)
+|   |   |   |   |   |   |   |   |   |   |    education =  9th:  >50K (0.0)
+|   |   |   |   |   |   |   |   |   |   |    education =  Some-college:  >50K (31.0/11.0)
+|   |   |   |   |   |   |   |   |   |   |    education =  Assoc-acdm:  <=50K (11.0/4.0)
+|   |   |   |   |   |   |   |   |   |   |    education =  Assoc-voc
+|   |   |   |   |   |   |   |   |   |   |   |    fnlwgt <= 72844:  <=50K (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |    fnlwgt > 72844:  >50K (10.0/4.0)
+|   |   |   |   |   |   |   |   |   |   |    education =  7th-8th:  >50K (0.0)
+|   |   |   |   |   |   |   |   |   |   |    education =  Doctorate:  >50K (0.0)
+|   |   |   |   |   |   |   |   |   |   |    education =  Prof-school:  >50K (0.0)
+|   |   |   |   |   |   |   |   |   |   |    education =  5th-6th:  >50K (0.0)
+|   |   |   |   |   |   |   |   |   |   |    education =  10th:  >50K (0.0)
+|   |   |   |   |   |   |   |   |   |   |    education =  1st-4th:  >50K (0.0)
+|   |   |   |   |   |   |   |   |   |   |    education =  Preschool:  >50K (0.0)
+|   |   |   |   |   |   |   |   |   |   |    education =  12th:  >50K (0.0)
+|   |   |   |   |   |   |   |   |   |    fnlwgt > 161857:  >50K (73.0/18.0)
+|   |   |   |   |   |   |   |   |    occupation =  ?
+|   |   |   |   |   |   |   |   |   |    education-num <= 10
+|   |   |   |   |   |   |   |   |   |   |    relationship =  Not-in-family:  <=50K (1.0)
+|   |   |   |   |   |   |   |   |   |   |    relationship =  Husband
+|   |   |   |   |   |   |   |   |   |   |   |    education =  Bachelors:  <=50K (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |    education =  HS-grad:  <=50K (98.0/27.0)
+|   |   |   |   |   |   |   |   |   |   |   |    education =  11th:  <=50K (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |    education =  Masters:  <=50K (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |    education =  9th:  <=50K (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |    education =  Some-college
+|   |   |   |   |   |   |   |   |   |   |   |   |    hours-per-week <= 49
+|   |   |   |   |   |   |   |   |   |   |   |   |   |    fnlwgt <= 110445:  <=50K (6.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |    fnlwgt > 110445
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |    fnlwgt <= 263024:  >50K (7.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |    fnlwgt > 263024:  <=50K (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |    hours-per-week > 49:  <=50K (7.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |    education =  Assoc-acdm:  <=50K (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |    education =  Assoc-voc:  <=50K (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |    education =  7th-8th:  <=50K (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |    education =  Doctorate:  <=50K (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |    education =  Prof-school:  <=50K (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |    education =  5th-6th:  <=50K (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |    education =  10th:  <=50K (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |    education =  1st-4th:  <=50K (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |    education =  Preschool:  <=50K (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |    education =  12th:  <=50K (0.0)
+|   |   |   |   |   |   |   |   |   |   |    relationship =  Wife
+|   |   |   |   |   |   |   |   |   |   |   |    fnlwgt <= 179973:  <=50K (5.0)
+|   |   |   |   |   |   |   |   |   |   |   |    fnlwgt > 179973:  >50K (6.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |    relationship =  Own-child:  <=50K (0.0)
+|   |   |   |   |   |   |   |   |   |   |    relationship =  Unmarried:  <=50K (0.0)
+|   |   |   |   |   |   |   |   |   |   |    relationship =  Other-relative:  <=50K (0.0)
+|   |   |   |   |   |   |   |   |   |    education-num > 10:  >50K (11.0/3.0)
+|   |   |   |   |   |   |   |   |    occupation =  Protective-serv
+|   |   |   |   |   |   |   |   |   |    workclass =  State-gov
+|   |   |   |   |   |   |   |   |   |   |    race =  White:  <=50K (28.0/7.0)
+|   |   |   |   |   |   |   |   |   |   |    race =  Black:  >50K (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |    race =  Asian-Pac-Islander:  <=50K (0.0)
+|   |   |   |   |   |   |   |   |   |   |    race =  Amer-Indian-Eskimo:  >50K (1.0)
+|   |   |   |   |   |   |   |   |   |   |    race =  Other:  <=50K (0.0)
+|   |   |   |   |   |   |   |   |   |    workclass =  Self-emp-not-inc:  >50K (0.0)
+|   |   |   |   |   |   |   |   |   |    workclass =  Private
+|   |   |   |   |   |   |   |   |   |   |    race =  White:  <=50K (27.0/7.0)
+|   |   |   |   |   |   |   |   |   |   |    race =  Black
+|   |   |   |   |   |   |   |   |   |   |   |    fnlwgt <= 98361:  <=50K (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |    fnlwgt > 98361:  >50K (7.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |    race =  Asian-Pac-Islander:  <=50K (0.0)
+|   |   |   |   |   |   |   |   |   |   |    race =  Amer-Indian-Eskimo:  <=50K (0.0)
+|   |   |   |   |   |   |   |   |   |   |    race =  Other:  <=50K (0.0)
+|   |   |   |   |   |   |   |   |   |    workclass =  Federal-gov:  <=50K (4.0/2.0)
+|   |   |   |   |   |   |   |   |   |    workclass =  Local-gov
+|   |   |   |   |   |   |   |   |   |   |   age <= 56:  >50K (73.0/21.0)
+|   |   |   |   |   |   |   |   |   |   |   age > 56:  <=50K (5.0)
+|   |   |   |   |   |   |   |   |   |    workclass =  ?:  >50K (0.0)
+|   |   |   |   |   |   |   |   |   |    workclass =  Self-emp-inc:  <=50K (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |    workclass =  Without-pay:  >50K (0.0)
+|   |   |   |   |   |   |   |   |   |    workclass =  Never-worked:  >50K (0.0)
+|   |   |   |   |   |   |   |   |    occupation =  Armed-Forces:  <=50K (0.0)
+|   |   |   |   |   |   |   |   |    occupation =  Priv-house-serv:  <=50K (5.0)
+|   |   |   |   |   |   |   |    capital-loss > 1504:  <=50K (51.0)
+|   |   |   |   |    capital-gain > 5060
+|   |   |   |   |   |    capital-gain <= 6514:  >50K (66.0)
+|   |   |   |   |   |    capital-gain > 6514:  <=50K (4.0)
+|   |   |    education-num > 12
+|   |   |   |    hours-per-week <= 31
+|   |   |   |   |    relationship =  Not-in-family:  <=50K (1.0)
+|   |   |   |   |    relationship =  Husband:  <=50K (232.0/70.0)
+|   |   |   |   |    relationship =  Wife
+|   |   |   |   |   |    native-country =  United-States:  >50K (67.0/24.0)
+|   |   |   |   |   |    native-country =  Cuba:  >50K (1.0)
+|   |   |   |   |   |    native-country =  Jamaica:  >50K (0.0)
+|   |   |   |   |   |    native-country =  India:  >50K (0.0)
+|   |   |   |   |   |    native-country =  ?:  <=50K (2.0)
+|   |   |   |   |   |    native-country =  Mexico:  >50K (0.0)
+|   |   |   |   |   |    native-country =  South:  >50K (0.0)
+|   |   |   |   |   |    native-country =  Puerto-Rico:  >50K (0.0)
+|   |   |   |   |   |    native-country =  Honduras:  >50K (0.0)
+|   |   |   |   |   |    native-country =  England:  >50K (0.0)
+|   |   |   |   |   |    native-country =  Canada:  <=50K (1.0)
+|   |   |   |   |   |    native-country =  Germany:  >50K (0.0)
+|   |   |   |   |   |    native-country =  Iran:  >50K (0.0)
+|   |   |   |   |   |    native-country =  Philippines:  >50K (0.0)
+|   |   |   |   |   |    native-country =  Italy:  >50K (0.0)
+|   |   |   |   |   |    native-country =  Poland:  <=50K (1.0)
+|   |   |   |   |   |    native-country =  Columbia:  >50K (0.0)
+|   |   |   |   |   |    native-country =  Cambodia:  >50K (0.0)
+|   |   |   |   |   |    native-country =  Thailand:  >50K (0.0)
+|   |   |   |   |   |    native-country =  Ecuador:  >50K (0.0)
+|   |   |   |   |   |    native-country =  Laos:  >50K (0.0)
+|   |   |   |   |   |    native-country =  Taiwan:  >50K (1.0)
+|   |   |   |   |   |    native-country =  Haiti:  >50K (0.0)
+|   |   |   |   |   |    native-country =  Portugal:  >50K (0.0)
+|   |   |   |   |   |    native-country =  Dominican-Republic:  >50K (0.0)
+|   |   |   |   |   |    native-country =  El-Salvador:  >50K (0.0)
+|   |   |   |   |   |    native-country =  France:  >50K (0.0)
+|   |   |   |   |   |    native-country =  Guatemala:  >50K (0.0)
+|   |   |   |   |   |    native-country =  China:  >50K (0.0)
+|   |   |   |   |   |    native-country =  Japan:  >50K (0.0)
+|   |   |   |   |   |    native-country =  Yugoslavia:  >50K (0.0)
+|   |   |   |   |   |    native-country =  Peru:  >50K (0.0)
+|   |   |   |   |   |    native-country =  Outlying-US(Guam-USVI-etc):  >50K (0.0)
+|   |   |   |   |   |    native-country =  Scotland:  >50K (0.0)
+|   |   |   |   |   |    native-country =  Trinadad&Tobago:  >50K (0.0)
+|   |   |   |   |   |    native-country =  Greece:  >50K (0.0)
+|   |   |   |   |   |    native-country =  Nicaragua:  >50K (0.0)
+|   |   |   |   |   |    native-country =  Vietnam:  >50K (0.0)
+|   |   |   |   |   |    native-country =  Hong:  >50K (0.0)
+|   |   |   |   |   |    native-country =  Ireland:  >50K (0.0)
+|   |   |   |   |   |    native-country =  Hungary:  >50K (0.0)
+|   |   |   |   |   |    native-country =  Holand-Netherlands:  >50K (0.0)
+|   |   |   |   |    relationship =  Own-child:  <=50K (3.0/1.0)
+|   |   |   |   |    relationship =  Unmarried:  <=50K (0.0)
+|   |   |   |   |    relationship =  Other-relative:  <=50K (2.0)
+|   |   |   |    hours-per-week > 31
+|   |   |   |   |   age <= 28
+|   |   |   |   |   |   age <= 25:  <=50K (68.0/17.0)
+|   |   |   |   |   |   age > 25
+|   |   |   |   |   |   |    sex =  Male:  <=50K (117.0/53.0)
+|   |   |   |   |   |   |    sex =  Female:  >50K (30.0/7.0)
+|   |   |   |   |   age > 28
+|   |   |   |   |   |    occupation =  Adm-clerical
+|   |   |   |   |   |   |    native-country =  United-States
+|   |   |   |   |   |   |   |   age <= 61:  >50K (104.0/41.0)
+|   |   |   |   |   |   |   |   age > 61:  <=50K (6.0/1.0)
+|   |   |   |   |   |   |    native-country =  Cuba:  >50K (0.0)
+|   |   |   |   |   |   |    native-country =  Jamaica:  >50K (0.0)
+|   |   |   |   |   |   |    native-country =  India:  <=50K (3.0)
+|   |   |   |   |   |   |    native-country =  ?:  >50K (5.0/1.0)
+|   |   |   |   |   |   |    native-country =  Mexico:  <=50K (3.0)
+|   |   |   |   |   |   |    native-country =  South:  <=50K (2.0/1.0)
+|   |   |   |   |   |   |    native-country =  Puerto-Rico:  >50K (0.0)
+|   |   |   |   |   |   |    native-country =  Honduras:  >50K (0.0)
+|   |   |   |   |   |   |    native-country =  England:  <=50K (1.0)
+|   |   |   |   |   |   |    native-country =  Canada:  >50K (0.0)
+|   |   |   |   |   |   |    native-country =  Germany:  >50K (2.0)
+|   |   |   |   |   |   |    native-country =  Iran:  >50K (1.0)
+|   |   |   |   |   |   |    native-country =  Philippines
+|   |   |   |   |   |   |   |    education =  Bachelors
+|   |   |   |   |   |   |   |   |   age <= 44:  >50K (9.0/1.0)
+|   |   |   |   |   |   |   |   |   age > 44:  <=50K (3.0)
+|   |   |   |   |   |   |   |    education =  HS-grad:  >50K (0.0)
+|   |   |   |   |   |   |   |    education =  11th:  >50K (0.0)
+|   |   |   |   |   |   |   |    education =  Masters:  >50K (0.0)
+|   |   |   |   |   |   |   |    education =  9th:  >50K (0.0)
+|   |   |   |   |   |   |   |    education =  Some-college:  >50K (0.0)
+|   |   |   |   |   |   |   |    education =  Assoc-acdm:  >50K (0.0)
+|   |   |   |   |   |   |   |    education =  Assoc-voc:  >50K (0.0)
+|   |   |   |   |   |   |   |    education =  7th-8th:  >50K (0.0)
+|   |   |   |   |   |   |   |    education =  Doctorate:  >50K (0.0)
+|   |   |   |   |   |   |   |    education =  Prof-school:  <=50K (3.0/1.0)
+|   |   |   |   |   |   |   |    education =  5th-6th:  >50K (0.0)
+|   |   |   |   |   |   |   |    education =  10th:  >50K (0.0)
+|   |   |   |   |   |   |   |    education =  1st-4th:  >50K (0.0)
+|   |   |   |   |   |   |   |    education =  Preschool:  >50K (0.0)
+|   |   |   |   |   |   |   |    education =  12th:  >50K (0.0)
+|   |   |   |   |   |   |    native-country =  Italy:  >50K (2.0)
+|   |   |   |   |   |   |    native-country =  Poland:  >50K (0.0)
+|   |   |   |   |   |   |    native-country =  Columbia:  >50K (0.0)
+|   |   |   |   |   |   |    native-country =  Cambodia:  >50K (0.0)
+|   |   |   |   |   |   |    native-country =  Thailand:  >50K (0.0)
+|   |   |   |   |   |   |    native-country =  Ecuador:  >50K (0.0)
+|   |   |   |   |   |   |    native-country =  Laos:  >50K (1.0)
+|   |   |   |   |   |   |    native-country =  Taiwan:  >50K (0.0)
+|   |   |   |   |   |   |    native-country =  Haiti:  >50K (0.0)
+|   |   |   |   |   |   |    native-country =  Portugal:  >50K (0.0)
+|   |   |   |   |   |   |    native-country =  Dominican-Republic:  >50K (0.0)
+|   |   |   |   |   |   |    native-country =  El-Salvador:  >50K (0.0)
+|   |   |   |   |   |   |    native-country =  France:  >50K (0.0)
+|   |   |   |   |   |   |    native-country =  Guatemala:  >50K (0.0)
+|   |   |   |   |   |   |    native-country =  China:  <=50K (1.0)
+|   |   |   |   |   |   |    native-country =  Japan:  >50K (0.0)
+|   |   |   |   |   |   |    native-country =  Yugoslavia:  >50K (0.0)
+|   |   |   |   |   |   |    native-country =  Peru:  >50K (0.0)
+|   |   |   |   |   |   |    native-country =  Outlying-US(Guam-USVI-etc):  >50K (0.0)
+|   |   |   |   |   |   |    native-country =  Scotland:  >50K (0.0)
+|   |   |   |   |   |   |    native-country =  Trinadad&Tobago:  >50K (0.0)
+|   |   |   |   |   |   |    native-country =  Greece:  >50K (0.0)
+|   |   |   |   |   |   |    native-country =  Nicaragua:  >50K (0.0)
+|   |   |   |   |   |   |    native-country =  Vietnam:  <=50K (1.0)
+|   |   |   |   |   |   |    native-country =  Hong:  >50K (0.0)
+|   |   |   |   |   |   |    native-country =  Ireland:  >50K (0.0)
+|   |   |   |   |   |   |    native-country =  Hungary:  >50K (0.0)
+|   |   |   |   |   |   |    native-country =  Holand-Netherlands:  >50K (0.0)
+|   |   |   |   |   |    occupation =  Exec-managerial:  >50K (827.0/188.0)
+|   |   |   |   |   |    occupation =  Handlers-cleaners
+|   |   |   |   |   |   |    capital-gain <= 2176:  <=50K (18.0/6.0)
+|   |   |   |   |   |   |    capital-gain > 2176:  >50K (2.0)
+|   |   |   |   |   |    occupation =  Prof-specialty
+|   |   |   |   |   |   |    relationship =  Not-in-family:  <=50K (2.0)
+|   |   |   |   |   |   |    relationship =  Husband:  >50K (962.0/262.0)
+|   |   |   |   |   |   |    relationship =  Wife:  >50K (121.0/29.0)
+|   |   |   |   |   |   |    relationship =  Own-child:  <=50K (2.0)
+|   |   |   |   |   |   |    relationship =  Unmarried:  >50K (0.0)
+|   |   |   |   |   |   |    relationship =  Other-relative:  <=50K (4.0)
+|   |   |   |   |   |    occupation =  Other-service
+|   |   |   |   |   |   |    hours-per-week <= 52:  <=50K (33.0/6.0)
+|   |   |   |   |   |   |    hours-per-week > 52:  >50K (3.0/1.0)
+|   |   |   |   |   |    occupation =  Sales
+|   |   |   |   |   |   |    workclass =  State-gov:  <=50K (1.0)
+|   |   |   |   |   |   |    workclass =  Self-emp-not-inc
+|   |   |   |   |   |   |   |    hours-per-week <= 46:  >50K (23.0/7.0)
+|   |   |   |   |   |   |   |    hours-per-week > 46:  <=50K (33.0/10.0)
+|   |   |   |   |   |   |    workclass =  Private
+|   |   |   |   |   |   |   |    education =  Bachelors:  >50K (209.0/68.0)
+|   |   |   |   |   |   |   |    education =  HS-grad:  >50K (0.0)
+|   |   |   |   |   |   |   |    education =  11th:  >50K (0.0)
+|   |   |   |   |   |   |   |    education =  Masters
+|   |   |   |   |   |   |   |   |   age <= 56
+|   |   |   |   |   |   |   |   |   |    hours-per-week <= 47
+|   |   |   |   |   |   |   |   |   |   |   age <= 51
+|   |   |   |   |   |   |   |   |   |   |   |    fnlwgt <= 163516:  <=50K (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |    fnlwgt > 163516:  >50K (9.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   age > 51:  <=50K (2.0)
+|   |   |   |   |   |   |   |   |   |    hours-per-week > 47:  >50K (9.0)
+|   |   |   |   |   |   |   |   |   age > 56:  <=50K (5.0/1.0)
+|   |   |   |   |   |   |   |    education =  9th:  >50K (0.0)
+|   |   |   |   |   |   |   |    education =  Some-college:  >50K (0.0)
+|   |   |   |   |   |   |   |    education =  Assoc-acdm:  >50K (0.0)
+|   |   |   |   |   |   |   |    education =  Assoc-voc:  >50K (0.0)
+|   |   |   |   |   |   |   |    education =  7th-8th:  >50K (0.0)
+|   |   |   |   |   |   |   |    education =  Doctorate:  <=50K (2.0)
+|   |   |   |   |   |   |   |    education =  Prof-school:  <=50K (6.0/2.0)
+|   |   |   |   |   |   |   |    education =  5th-6th:  >50K (0.0)
+|   |   |   |   |   |   |   |    education =  10th:  >50K (0.0)
+|   |   |   |   |   |   |   |    education =  1st-4th:  >50K (0.0)
+|   |   |   |   |   |   |   |    education =  Preschool:  >50K (0.0)
+|   |   |   |   |   |   |   |    education =  12th:  >50K (0.0)
+|   |   |   |   |   |   |    workclass =  Federal-gov:  <=50K (3.0/1.0)
+|   |   |   |   |   |   |    workclass =  Local-gov:  >50K (1.0)
+|   |   |   |   |   |   |    workclass =  ?:  >50K (0.0)
+|   |   |   |   |   |   |    workclass =  Self-emp-inc:  >50K (62.0/16.0)
+|   |   |   |   |   |   |    workclass =  Without-pay:  >50K (0.0)
+|   |   |   |   |   |   |    workclass =  Never-worked:  >50K (0.0)
+|   |   |   |   |   |    occupation =  Craft-repair
+|   |   |   |   |   |   |    workclass =  State-gov:  >50K (1.0)
+|   |   |   |   |   |   |    workclass =  Self-emp-not-inc
+|   |   |   |   |   |   |   |    education =  Bachelors
+|   |   |   |   |   |   |   |   |    hours-per-week <= 52:  <=50K (16.0/4.0)
+|   |   |   |   |   |   |   |   |    hours-per-week > 52:  >50K (2.0)
+|   |   |   |   |   |   |   |    education =  HS-grad:  <=50K (0.0)
+|   |   |   |   |   |   |   |    education =  11th:  <=50K (0.0)
+|   |   |   |   |   |   |   |    education =  Masters:  >50K (5.0/1.0)
+|   |   |   |   |   |   |   |    education =  9th:  <=50K (0.0)
+|   |   |   |   |   |   |   |    education =  Some-college:  <=50K (0.0)
+|   |   |   |   |   |   |   |    education =  Assoc-acdm:  <=50K (0.0)
+|   |   |   |   |   |   |   |    education =  Assoc-voc:  <=50K (0.0)
+|   |   |   |   |   |   |   |    education =  7th-8th:  <=50K (0.0)
+|   |   |   |   |   |   |   |    education =  Doctorate:  <=50K (1.0)
+|   |   |   |   |   |   |   |    education =  Prof-school:  <=50K (2.0)
+|   |   |   |   |   |   |   |    education =  5th-6th:  <=50K (0.0)
+|   |   |   |   |   |   |   |    education =  10th:  <=50K (0.0)
+|   |   |   |   |   |   |   |    education =  1st-4th:  <=50K (0.0)
+|   |   |   |   |   |   |   |    education =  Preschool:  <=50K (0.0)
+|   |   |   |   |   |   |   |    education =  12th:  <=50K (0.0)
+|   |   |   |   |   |   |    workclass =  Private:  >50K (83.0/34.0)
+|   |   |   |   |   |   |    workclass =  Federal-gov:  <=50K (3.0/1.0)
+|   |   |   |   |   |   |    workclass =  Local-gov
+|   |   |   |   |   |   |   |   age <= 44:  <=50K (6.0)
+|   |   |   |   |   |   |   |   age > 44:  >50K (2.0)
+|   |   |   |   |   |   |    workclass =  ?:  >50K (0.0)
+|   |   |   |   |   |   |    workclass =  Self-emp-inc:  <=50K (10.0/3.0)
+|   |   |   |   |   |   |    workclass =  Without-pay:  >50K (0.0)
+|   |   |   |   |   |   |    workclass =  Never-worked:  >50K (0.0)
+|   |   |   |   |   |    occupation =  Transport-moving
+|   |   |   |   |   |   |    race =  White
+|   |   |   |   |   |   |   |   age <= 44:  <=50K (14.0/3.0)
+|   |   |   |   |   |   |   |   age > 44
+|   |   |   |   |   |   |   |   |   age <= 52:  >50K (8.0/1.0)
+|   |   |   |   |   |   |   |   |   age > 52:  <=50K (5.0)
+|   |   |   |   |   |   |    race =  Black:  <=50K (3.0)
+|   |   |   |   |   |   |    race =  Asian-Pac-Islander:  >50K (1.0)
+|   |   |   |   |   |   |    race =  Amer-Indian-Eskimo:  <=50K (0.0)
+|   |   |   |   |   |   |    race =  Other:  <=50K (0.0)
+|   |   |   |   |   |    occupation =  Farming-fishing
+|   |   |   |   |   |   |    fnlwgt <= 34574:  >50K (8.0/1.0)
+|   |   |   |   |   |   |    fnlwgt > 34574:  <=50K (40.0/10.0)
+|   |   |   |   |   |    occupation =  Machine-op-inspct:  <=50K (32.0/11.0)
+|   |   |   |   |   |    occupation =  Tech-support
+|   |   |   |   |   |   |    native-country =  United-States:  >50K (66.0/18.0)
+|   |   |   |   |   |   |    native-country =  Cuba:  >50K (0.0)
+|   |   |   |   |   |   |    native-country =  Jamaica:  >50K (0.0)
+|   |   |   |   |   |   |    native-country =  India:  <=50K (1.0)
+|   |   |   |   |   |   |    native-country =  ?:  <=50K (1.0)
+|   |   |   |   |   |   |    native-country =  Mexico:  >50K (0.0)
+|   |   |   |   |   |   |    native-country =  South:  >50K (0.0)
+|   |   |   |   |   |   |    native-country =  Puerto-Rico:  >50K (0.0)
+|   |   |   |   |   |   |    native-country =  Honduras:  >50K (0.0)
+|   |   |   |   |   |   |    native-country =  England:  <=50K (1.0)
+|   |   |   |   |   |   |    native-country =  Canada:  >50K (0.0)
+|   |   |   |   |   |   |    native-country =  Germany:  >50K (0.0)
+|   |   |   |   |   |   |    native-country =  Iran:  <=50K (1.0)
+|   |   |   |   |   |   |    native-country =  Philippines:  >50K (2.0)
+|   |   |   |   |   |   |    native-country =  Italy:  >50K (0.0)
+|   |   |   |   |   |   |    native-country =  Poland:  >50K (0.0)
+|   |   |   |   |   |   |    native-country =  Columbia:  >50K (0.0)
+|   |   |   |   |   |   |    native-country =  Cambodia:  >50K (0.0)
+|   |   |   |   |   |   |    native-country =  Thailand:  >50K (0.0)
+|   |   |   |   |   |   |    native-country =  Ecuador:  >50K (0.0)
+|   |   |   |   |   |   |    native-country =  Laos:  >50K (0.0)
+|   |   |   |   |   |   |    native-country =  Taiwan:  >50K (0.0)
+|   |   |   |   |   |   |    native-country =  Haiti:  >50K (0.0)
+|   |   |   |   |   |   |    native-country =  Portugal:  >50K (0.0)
+|   |   |   |   |   |   |    native-country =  Dominican-Republic:  >50K (0.0)
+|   |   |   |   |   |   |    native-country =  El-Salvador:  >50K (0.0)
+|   |   |   |   |   |   |    native-country =  France:  >50K (0.0)
+|   |   |   |   |   |   |    native-country =  Guatemala:  >50K (0.0)
+|   |   |   |   |   |   |    native-country =  China:  >50K (0.0)
+|   |   |   |   |   |   |    native-country =  Japan:  >50K (0.0)
+|   |   |   |   |   |   |    native-country =  Yugoslavia:  >50K (0.0)
+|   |   |   |   |   |   |    native-country =  Peru:  >50K (0.0)
+|   |   |   |   |   |   |    native-country =  Outlying-US(Guam-USVI-etc):  >50K (0.0)
+|   |   |   |   |   |   |    native-country =  Scotland:  >50K (0.0)
+|   |   |   |   |   |   |    native-country =  Trinadad&Tobago:  >50K (0.0)
+|   |   |   |   |   |   |    native-country =  Greece:  >50K (0.0)
+|   |   |   |   |   |   |    native-country =  Nicaragua:  >50K (0.0)
+|   |   |   |   |   |   |    native-country =  Vietnam:  >50K (0.0)
+|   |   |   |   |   |   |    native-country =  Hong:  >50K (0.0)
+|   |   |   |   |   |   |    native-country =  Ireland:  >50K (0.0)
+|   |   |   |   |   |   |    native-country =  Hungary:  >50K (0.0)
+|   |   |   |   |   |   |    native-country =  Holand-Netherlands:  >50K (0.0)
+|   |   |   |   |   |    occupation =  ?
+|   |   |   |   |   |   |    hours-per-week <= 43
+|   |   |   |   |   |   |   |    hours-per-week <= 38:  >50K (2.0)
+|   |   |   |   |   |   |   |    hours-per-week > 38
+|   |   |   |   |   |   |   |   |    fnlwgt <= 369909:  <=50K (27.0/7.0)
+|   |   |   |   |   |   |   |   |    fnlwgt > 369909:  >50K (3.0)
+|   |   |   |   |   |   |    hours-per-week > 43:  >50K (19.0/7.0)
+|   |   |   |   |   |    occupation =  Protective-serv:  >50K (47.0/12.0)
+|   |   |   |   |   |    occupation =  Armed-Forces:  >50K (0.0)
+|   |   |   |   |   |    occupation =  Priv-house-serv:  <=50K (1.0)
+|   |    capital-loss > 1762
+|   |   |    capital-loss <= 1980:  >50K (585.0/14.0)
+|   |   |    capital-loss > 1980
+|   |   |   |    capital-loss <= 2163:  <=50K (63.0)
+|   |   |   |    capital-loss > 2163
+|   |   |   |   |    education-num <= 12
+|   |   |   |   |   |    capital-loss <= 2174:  >50K (5.0)
+|   |   |   |   |   |    capital-loss > 2174
+|   |   |   |   |   |   |    capital-loss <= 2206:  <=50K (14.0)
+|   |   |   |   |   |   |    capital-loss > 2206
+|   |   |   |   |   |   |   |    capital-loss <= 2415
+|   |   |   |   |   |   |   |   |    capital-loss <= 2392
+|   |   |   |   |   |   |   |   |   |    capital-loss <= 2246:  >50K (2.0)
+|   |   |   |   |   |   |   |   |   |    capital-loss > 2246
+|   |   |   |   |   |   |   |   |   |   |   age <= 67:  <=50K (13.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   age > 67:  >50K (4.0/1.0)
+|   |   |   |   |   |   |   |   |    capital-loss > 2392:  >50K (10.0)
+|   |   |   |   |   |   |   |    capital-loss > 2415:  <=50K (10.0)
+|   |   |   |   |    education-num > 12:  >50K (62.0/2.0)
+|    marital-status =  Divorced
+|   |    education-num <= 12:  <=50K (3526.0/167.0)
+|   |    education-num > 12
+|   |   |    hours-per-week <= 43
+|   |   |   |    capital-loss <= 1668:  <=50K (455.0/52.0)
+|   |   |   |    capital-loss > 1668
+|   |   |   |   |    capital-loss <= 2231:  <=50K (12.0/1.0)
+|   |   |   |   |    capital-loss > 2231:  >50K (9.0/2.0)
+|   |   |    hours-per-week > 43
+|   |   |   |    occupation =  Adm-clerical:  <=50K (9.0/1.0)
+|   |   |   |    occupation =  Exec-managerial
+|   |   |   |   |    capital-loss <= 880
+|   |   |   |   |   |    education =  Bachelors:  <=50K (63.0/28.0)
+|   |   |   |   |   |    education =  HS-grad:  <=50K (0.0)
+|   |   |   |   |   |    education =  11th:  <=50K (0.0)
+|   |   |   |   |   |    education =  Masters
+|   |   |   |   |   |   |    capital-loss <= 0
+|   |   |   |   |   |   |   |    fnlwgt <= 118462:  <=50K (5.0/1.0)
+|   |   |   |   |   |   |   |    fnlwgt > 118462:  >50K (22.0/6.0)
+|   |   |   |   |   |   |    capital-loss > 0:  <=50K (2.0)
+|   |   |   |   |   |    education =  9th:  <=50K (0.0)
+|   |   |   |   |   |    education =  Some-college:  <=50K (0.0)
+|   |   |   |   |   |    education =  Assoc-acdm:  <=50K (0.0)
+|   |   |   |   |   |    education =  Assoc-voc:  <=50K (0.0)
+|   |   |   |   |   |    education =  7th-8th:  <=50K (0.0)
+|   |   |   |   |   |    education =  Doctorate:  >50K (2.0)
+|   |   |   |   |   |    education =  Prof-school:  <=50K (2.0/1.0)
+|   |   |   |   |   |    education =  5th-6th:  <=50K (0.0)
+|   |   |   |   |   |    education =  10th:  <=50K (0.0)
+|   |   |   |   |   |    education =  1st-4th:  <=50K (0.0)
+|   |   |   |   |   |    education =  Preschool:  <=50K (0.0)
+|   |   |   |   |   |    education =  12th:  <=50K (0.0)
+|   |   |   |   |    capital-loss > 880:  >50K (8.0)
+|   |   |   |    occupation =  Handlers-cleaners:  >50K (1.0)
+|   |   |   |    occupation =  Prof-specialty
+|   |   |   |   |    workclass =  State-gov
+|   |   |   |   |   |    fnlwgt <= 230657:  <=50K (7.0/1.0)
+|   |   |   |   |   |    fnlwgt > 230657:  >50K (3.0)
+|   |   |   |   |    workclass =  Self-emp-not-inc
+|   |   |   |   |   |    education-num <= 14
+|   |   |   |   |   |   |    fnlwgt <= 90338:  >50K (3.0)
+|   |   |   |   |   |   |    fnlwgt > 90338:  <=50K (6.0/1.0)
+|   |   |   |   |   |    education-num > 14:  >50K (4.0)
+|   |   |   |   |    workclass =  Private:  <=50K (49.0/16.0)
+|   |   |   |   |    workclass =  Federal-gov:  >50K (4.0/1.0)
+|   |   |   |   |    workclass =  Local-gov:  <=50K (40.0/2.0)
+|   |   |   |   |    workclass =  ?:  <=50K (0.0)
+|   |   |   |   |    workclass =  Self-emp-inc:  <=50K (4.0/1.0)
+|   |   |   |   |    workclass =  Without-pay:  <=50K (0.0)
+|   |   |   |   |    workclass =  Never-worked:  <=50K (0.0)
+|   |   |   |    occupation =  Other-service:  >50K (7.0/2.0)
+|   |   |   |    occupation =  Sales:  <=50K (49.0/17.0)
+|   |   |   |    occupation =  Craft-repair
+|   |   |   |   |    fnlwgt <= 143833:  >50K (3.0/1.0)
+|   |   |   |   |    fnlwgt > 143833:  <=50K (5.0)
+|   |   |   |    occupation =  Transport-moving:  <=50K (3.0)
+|   |   |   |    occupation =  Farming-fishing:  <=50K (3.0)
+|   |   |   |    occupation =  Machine-op-inspct:  <=50K (0.0)
+|   |   |   |    occupation =  Tech-support:  <=50K (0.0)
+|   |   |   |    occupation =  ?:  <=50K (7.0)
+|   |   |   |    occupation =  Protective-serv
+|   |   |   |   |    race =  White:  <=50K (6.0/2.0)
+|   |   |   |   |    race =  Black:  >50K (3.0)
+|   |   |   |   |    race =  Asian-Pac-Islander:  >50K (0.0)
+|   |   |   |   |    race =  Amer-Indian-Eskimo:  >50K (0.0)
+|   |   |   |   |    race =  Other:  >50K (0.0)
+|   |   |   |    occupation =  Armed-Forces:  <=50K (0.0)
+|   |   |   |    occupation =  Priv-house-serv:  <=50K (1.0)
+|    marital-status =  Married-spouse-absent:  <=50K (410.0/26.0)
+|    marital-status =  Separated
+|   |    education-num <= 12:  <=50K (885.0/22.0)
+|   |    education-num > 12
+|   |   |    education =  Bachelors
+|   |   |   |    capital-gain <= 4687:  <=50K (85.0/10.0)
+|   |   |   |    capital-gain > 4687:  >50K (3.0/1.0)
+|   |   |    education =  HS-grad:  <=50K (0.0)
+|   |   |    education =  11th:  <=50K (0.0)
+|   |   |    education =  Masters
+|   |   |   |    sex =  Male
+|   |   |   |   |    occupation =  Adm-clerical:  >50K (0.0)
+|   |   |   |   |    occupation =  Exec-managerial:  >50K (4.0)
+|   |   |   |   |    occupation =  Handlers-cleaners:  >50K (0.0)
+|   |   |   |   |    occupation =  Prof-specialty:  <=50K (3.0/1.0)
+|   |   |   |   |    occupation =  Other-service:  >50K (0.0)
+|   |   |   |   |    occupation =  Sales:  >50K (0.0)
+|   |   |   |   |    occupation =  Craft-repair:  >50K (0.0)
+|   |   |   |   |    occupation =  Transport-moving:  >50K (0.0)
+|   |   |   |   |    occupation =  Farming-fishing:  >50K (0.0)
+|   |   |   |   |    occupation =  Machine-op-inspct:  >50K (0.0)
+|   |   |   |   |    occupation =  Tech-support:  >50K (0.0)
+|   |   |   |   |    occupation =  ?:  >50K (0.0)
+|   |   |   |   |    occupation =  Protective-serv:  >50K (0.0)
+|   |   |   |   |    occupation =  Armed-Forces:  >50K (0.0)
+|   |   |   |   |    occupation =  Priv-house-serv:  >50K (0.0)
+|   |   |   |    sex =  Female:  <=50K (14.0/2.0)
+|   |   |    education =  9th:  <=50K (0.0)
+|   |   |    education =  Some-college:  <=50K (0.0)
+|   |   |    education =  Assoc-acdm:  <=50K (0.0)
+|   |   |    education =  Assoc-voc:  <=50K (0.0)
+|   |   |    education =  7th-8th:  <=50K (0.0)
+|   |   |    education =  Doctorate
+|   |   |   |    fnlwgt <= 192286:  <=50K (3.0)
+|   |   |   |    fnlwgt > 192286:  >50K (4.0)
+|   |   |    education =  Prof-school
+|   |   |   |    fnlwgt <= 129246:  <=50K (2.0)
+|   |   |   |    fnlwgt > 129246:  >50K (6.0)
+|   |   |    education =  5th-6th:  <=50K (0.0)
+|   |   |    education =  10th:  <=50K (0.0)
+|   |   |    education =  1st-4th:  <=50K (0.0)
+|   |   |    education =  Preschool:  <=50K (0.0)
+|   |   |    education =  12th:  <=50K (0.0)
+|    marital-status =  Married-AF-spouse
+|   |    education =  Bachelors:  >50K (3.0)
+|   |    education =  HS-grad:  <=50K (13.0/3.0)
+|   |    education =  11th:  <=50K (0.0)
+|   |    education =  Masters:  <=50K (0.0)
+|   |    education =  9th:  <=50K (0.0)
+|   |    education =  Some-college:  >50K (3.0/1.0)
+|   |    education =  Assoc-acdm:  <=50K (2.0)
+|   |    education =  Assoc-voc:  >50K (1.0)
+|   |    education =  7th-8th:  <=50K (0.0)
+|   |    education =  Doctorate:  <=50K (0.0)
+|   |    education =  Prof-school:  <=50K (0.0)
+|   |    education =  5th-6th:  <=50K (0.0)
+|   |    education =  10th:  <=50K (0.0)
+|   |    education =  1st-4th:  <=50K (0.0)
+|   |    education =  Preschool:  <=50K (0.0)
+|   |    education =  12th:  <=50K (0.0)
+|    marital-status =  Widowed:  <=50K (973.0/65.0)
+ capital-gain > 6849
+|    education-num <= 10
+|   |    hours-per-week <= 35
+|   |   |   age <= 27:  <=50K (5.0)
+|   |   |   age > 27
+|   |   |   |    hours-per-week <= 34:  >50K (29.0)
+|   |   |   |    hours-per-week > 34
+|   |   |   |   |    education =  Bachelors:  >50K (0.0)
+|   |   |   |   |    education =  HS-grad:  >50K (12.0/2.0)
+|   |   |   |   |    education =  11th:  >50K (0.0)
+|   |   |   |   |    education =  Masters:  >50K (0.0)
+|   |   |   |   |    education =  9th:  >50K (0.0)
+|   |   |   |   |    education =  Some-college:  <=50K (2.0)
+|   |   |   |   |    education =  Assoc-acdm:  >50K (0.0)
+|   |   |   |   |    education =  Assoc-voc:  >50K (0.0)
+|   |   |   |   |    education =  7th-8th:  >50K (0.0)
+|   |   |   |   |    education =  Doctorate:  >50K (0.0)
+|   |   |   |   |    education =  Prof-school:  >50K (0.0)
+|   |   |   |   |    education =  5th-6th:  >50K (0.0)
+|   |   |   |   |    education =  10th:  >50K (0.0)
+|   |   |   |   |    education =  1st-4th:  >50K (0.0)
+|   |   |   |   |    education =  Preschool:  >50K (0.0)
+|   |   |   |   |    education =  12th:  >50K (0.0)
+|   |    hours-per-week > 35
+|   |   |   age <= 60:  >50K (384.0/4.0)
+|   |   |   age > 60
+|   |   |   |    capital-gain <= 9562:  >50K (20.0)
+|   |   |   |    capital-gain > 9562
+|   |   |   |   |    capital-gain <= 10566:  <=50K (4.0)
+|   |   |   |   |    capital-gain > 10566:  >50K (18.0/1.0)
+|    education-num > 10:  >50K (925.0/2.0)
+
+Number of Leaves  : 	719
+
+Size of the tree : 	901
+
+
+Time taken to build model: 1.35 seconds
+
+=== Evaluation on training set ===
+
+Time taken to test model on training data: 0.03 seconds
+
+=== Summary ===
+
+Correctly Classified Instances       28697               88.133  %
+Incorrectly Classified Instances      3864               11.867  %
+Kappa statistic                          0.6554
+Mean absolute error                      0.1794
+Root mean squared error                  0.2995
+Relative absolute error                 49.0746 %
+Root relative squared error             70.054  %
+Total Number of Instances            32561     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.949    0.331    0.900      0.949    0.924      0.660    0.914     0.964      <=50K
+                 0.669    0.051    0.806      0.669    0.731      0.660    0.914     0.811      >50K
+Weighted Avg.    0.881    0.264    0.877      0.881    0.877      0.660    0.914     0.927     
+
+=== Confusion Matrix ===
+
+     a     b   <-- classified as
+ 23455  1265 |     a =  <=50K
+  2599  5242 |     b =  >50K
+

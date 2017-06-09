@@ -1,0 +1,61 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.lazy.IBk -K 1 -W 0 -A "weka.core.neighboursearch.LinearNNSearch -A \"weka.core.EuclideanDistance -R first-last\""
+Relation:     bank-full
+Instances:    45211
+Attributes:   17
+              age
+               job
+               marital
+               education
+               default
+               balance
+               housing
+               loan
+               contact
+               day
+               month
+               duration
+               campaign
+               pdays
+               previous
+               poutcome
+               subscribed_term_deposit
+Test mode:    evaluate on training data
+
+=== Classifier model (full training set) ===
+
+IB1 instance-based classifier
+using 1 nearest neighbour(s) for classification
+
+
+Time taken to build model: 0.01 seconds
+
+=== Evaluation on training set ===
+
+Time taken to test model on training data: 136.77 seconds
+
+=== Summary ===
+
+Correctly Classified Instances       45211              100      %
+Incorrectly Classified Instances         0                0      %
+Kappa statistic                          1     
+Mean absolute error                      0     
+Root mean squared error                  0     
+Relative absolute error                  0.0107 %
+Root relative squared error              0.0069 %
+Total Number of Instances            45211     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 1.000    0.000    1.000      1.000    1.000      1.000    1.000     1.000     no
+                 1.000    0.000    1.000      1.000    1.000      1.000    1.000     1.000     yes
+Weighted Avg.    1.000    0.000    1.000      1.000    1.000      1.000    1.000     1.000     
+
+=== Confusion Matrix ===
+
+     a     b   <-- classified as
+ 39922     0 |     a = no
+     0  5289 |     b = yes
+

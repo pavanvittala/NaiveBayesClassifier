@@ -1,0 +1,178 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.bayes.NaiveBayes 
+Relation:     bank-full-csv
+Instances:    45211
+Attributes:   17
+              age
+               job
+               marital
+               education
+               default
+               balance
+               housing
+               loan
+               contact
+               day
+               month
+               duration
+               campaign
+               pdays
+               previous
+               poutcome
+               subscribed_term_deposit
+Test mode:    evaluate on training data
+
+=== Classifier model (full training set) ===
+
+Naive Bayes Classifier
+
+                      Class
+Attribute                no       yes
+                     (0.88)    (0.12)
+======================================
+age
+  mean               40.8499    41.722
+  std. dev.           9.8991   13.2736
+  weight sum           39922      5289
+  precision           1.0132    1.0132
+
+ job
+  management          8158.0    1302.0
+  technician          6758.0     841.0
+  entrepreneur        1365.0     124.0
+  blue-collar         9025.0     709.0
+  unknown              255.0      35.0
+  retired             1749.0     517.0
+  admin.              4541.0     632.0
+  services            3786.0     370.0
+  self-employed       1393.0     188.0
+  unemployed          1102.0     203.0
+  housemaid           1132.0     110.0
+  student              670.0     270.0
+  [total]            39934.0    5301.0
+
+ marital
+  married            24460.0    2756.0
+  single             10879.0    1913.0
+  divorced            4586.0     623.0
+  [total]            39925.0    5292.0
+
+ education
+  tertiary           11306.0    1997.0
+  secondary          20753.0    2451.0
+  unknown             1606.0     253.0
+  primary             6261.0     592.0
+  [total]            39926.0    5293.0
+
+ default
+  no                 39160.0    5238.0
+  yes                  764.0      53.0
+  [total]            39924.0    5291.0
+
+ balance
+  mean             1303.6346 1804.3002
+  std. dev.        2974.1803 3500.7606
+  weight sum           39922      5289
+  precision          15.3685   15.3685
+
+ housing
+  yes                23196.0    1936.0
+  no                 16728.0    3355.0
+  [total]            39924.0    5291.0
+
+ loan
+  no                 33163.0    4806.0
+  yes                 6761.0     485.0
+  [total]            39924.0    5291.0
+
+ contact
+  unknown            12491.0     531.0
+  cellular           24917.0    4370.0
+  telephone           2517.0     391.0
+  [total]            39925.0    5292.0
+
+ day
+  mean               15.8923   15.1583
+  std. dev.           8.2946    8.5011
+  weight sum           39922      5289
+  precision                1         1
+
+ month
+  may                12842.0     926.0
+  jun                 4796.0     547.0
+  jul                 6269.0     628.0
+  aug                 5560.0     689.0
+  oct                  416.0     324.0
+  nov                 3568.0     404.0
+  dec                  115.0     101.0
+  jan                 1262.0     143.0
+  feb                 2209.0     442.0
+  mar                  230.0     249.0
+  apr                 2356.0     578.0
+  sep                  311.0     270.0
+  [total]            39934.0    5301.0
+
+ duration
+  mean              221.1768  537.2908
+  std. dev.         207.3819  392.4944
+  weight sum           39922      5289
+  precision           3.1285    3.1285
+
+ campaign
+  mean                3.1203    2.4345
+  std. dev.            3.132     1.844
+  weight sum           39922      5289
+  precision           1.3191    1.3191
+
+ pdays
+  mean               35.9464   68.3406
+  std. dev.          96.9344  119.0188
+  weight sum           39922      5289
+  precision           1.5627    1.5627
+
+ previous
+  mean                0.3534    0.8449
+  std. dev.           2.3201      2.74
+  weight sum           39922      5289
+  precision            6.875     6.875
+
+ poutcome
+  unknown            33574.0    3387.0
+  failure             4284.0     619.0
+  other               1534.0     308.0
+  success              534.0     979.0
+  [total]            39926.0    5293.0
+
+
+
+Time taken to build model: 0.06 seconds
+
+=== Evaluation on training set ===
+
+Time taken to test model on training data: 0.51 seconds
+
+=== Summary ===
+
+Correctly Classified Instances       39811               88.056  %
+Incorrectly Classified Instances      5400               11.944  %
+Kappa statistic                          0.4409
+Mean absolute error                      0.153 
+Root mean squared error                  0.3078
+Relative absolute error                 74.0529 %
+Root relative squared error             95.778  %
+Total Number of Instances            45211     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.927    0.471    0.937      0.927    0.932      0.441    0.862     0.975     no
+                 0.529    0.073    0.490      0.529    0.509      0.441    0.862     0.448     yes
+Weighted Avg.    0.881    0.425    0.885      0.881    0.883      0.441    0.862     0.913     
+
+=== Confusion Matrix ===
+
+     a     b   <-- classified as
+ 37014  2908 |     a = no
+  2492  2797 |     b = yes
+

@@ -1,0 +1,89 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.lazy.IBk -K 1 -W 0 -A "weka.core.neighboursearch.LinearNNSearch -A \"weka.core.EuclideanDistance -R first-last\""
+Relation:     connect-4
+Instances:    67557
+Attributes:   43
+              a1
+               a2
+               a3
+               a4
+               a5
+               a6
+               b1
+               b2
+               b3
+               b4
+               b5
+               b6
+               c1
+               c2
+               c3
+               c4
+               c5
+               c6
+               d1
+               d2
+               d3
+               d4
+               d5
+               d6
+               e1
+               e2
+               e3
+               e4
+               e5
+               e6
+               f1
+               f2
+               f3
+               f4
+               f5
+               f6
+               g1
+               g2
+               g3
+               g4
+               g5
+               g6
+               class
+Test mode:    evaluate on training data
+
+=== Classifier model (full training set) ===
+
+IB1 instance-based classifier
+using 1 nearest neighbour(s) for classification
+
+
+Time taken to build model: 0.03 seconds
+
+=== Evaluation on training set ===
+
+Time taken to test model on training data: 405.01 seconds
+
+=== Summary ===
+
+Correctly Classified Instances       67557              100      %
+Incorrectly Classified Instances         0                0      %
+Kappa statistic                          1     
+Mean absolute error                      0     
+Root mean squared error                  0     
+Relative absolute error                  0.006  %
+Root relative squared error              0.0051 %
+Total Number of Instances            67557     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 1.000    0.000    1.000      1.000    1.000      1.000    1.000     1.000     win
+                 1.000    0.000    1.000      1.000    1.000      1.000    1.000     1.000     draw
+                 1.000    0.000    1.000      1.000    1.000      1.000    1.000     1.000     loss
+Weighted Avg.    1.000    0.000    1.000      1.000    1.000      1.000    1.000     1.000     
+
+=== Confusion Matrix ===
+
+     a     b     c   <-- classified as
+ 44473     0     0 |     a = win
+     0  6449     0 |     b = draw
+     0     0 16635 |     c = loss
+

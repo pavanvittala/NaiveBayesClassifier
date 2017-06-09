@@ -1,0 +1,241 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.J48 -C 0.25 -M 2
+Relation:     car-weka.filters.unsupervised.attribute.StringToNominal-R3-4
+Instances:    1728
+Attributes:   7
+              buying
+               maint
+               doors
+               persons
+               lug_boot
+               safety
+               quality
+Test mode:    evaluate on training data
+
+=== Classifier model (full training set) ===
+
+J48 pruned tree
+------------------
+
+ safety = low: unacc (576.0)
+ safety = med
+|    persons = 2: unacc (192.0)
+|    persons = 4
+|   |   buying = vhigh
+|   |   |    maint = vhigh: unacc (12.0)
+|   |   |    maint = high: unacc (12.0)
+|   |   |    maint = med
+|   |   |   |    lug_boot = small: unacc (4.0)
+|   |   |   |    lug_boot = med: unacc (4.0/2.0)
+|   |   |   |    lug_boot = big: acc (4.0)
+|   |   |    maint = low
+|   |   |   |    lug_boot = small: unacc (4.0)
+|   |   |   |    lug_boot = med: unacc (4.0/2.0)
+|   |   |   |    lug_boot = big: acc (4.0)
+|   |   buying = high
+|   |   |    lug_boot = small: unacc (16.0)
+|   |   |    lug_boot = med
+|   |   |   |    doors = 2: unacc (4.0)
+|   |   |   |    doors = 3: unacc (4.0)
+|   |   |   |    doors = 4: acc (4.0/1.0)
+|   |   |   |    doors = 5more: acc (4.0/1.0)
+|   |   |    lug_boot = big
+|   |   |   |    maint = vhigh: unacc (4.0)
+|   |   |   |    maint = high: acc (4.0)
+|   |   |   |    maint = med: acc (4.0)
+|   |   |   |    maint = low: acc (4.0)
+|   |   buying = med
+|   |   |    maint = vhigh
+|   |   |   |    lug_boot = small: unacc (4.0)
+|   |   |   |    lug_boot = med: unacc (4.0/2.0)
+|   |   |   |    lug_boot = big: acc (4.0)
+|   |   |    maint = high
+|   |   |   |    lug_boot = small: unacc (4.0)
+|   |   |   |    lug_boot = med: unacc (4.0/2.0)
+|   |   |   |    lug_boot = big: acc (4.0)
+|   |   |    maint = med: acc (12.0)
+|   |   |    maint = low
+|   |   |   |    lug_boot = small: acc (4.0)
+|   |   |   |    lug_boot = med: acc (4.0/2.0)
+|   |   |   |    lug_boot = big: good (4.0)
+|   |   buying = low
+|   |   |    maint = vhigh
+|   |   |   |    lug_boot = small: unacc (4.0)
+|   |   |   |    lug_boot = med: unacc (4.0/2.0)
+|   |   |   |    lug_boot = big: acc (4.0)
+|   |   |    maint = high: acc (12.0)
+|   |   |    maint = med
+|   |   |   |    lug_boot = small: acc (4.0)
+|   |   |   |    lug_boot = med: acc (4.0/2.0)
+|   |   |   |    lug_boot = big: good (4.0)
+|   |   |    maint = low
+|   |   |   |    lug_boot = small: acc (4.0)
+|   |   |   |    lug_boot = med: acc (4.0/2.0)
+|   |   |   |    lug_boot = big: good (4.0)
+|    persons = more
+|   |    lug_boot = small
+|   |   |   buying = vhigh: unacc (16.0)
+|   |   |   buying = high: unacc (16.0)
+|   |   |   buying = med
+|   |   |   |    maint = vhigh: unacc (4.0)
+|   |   |   |    maint = high: unacc (4.0)
+|   |   |   |    maint = med: acc (4.0/1.0)
+|   |   |   |    maint = low: acc (4.0/1.0)
+|   |   |   buying = low
+|   |   |   |    maint = vhigh: unacc (4.0)
+|   |   |   |    maint = high: acc (4.0/1.0)
+|   |   |   |    maint = med: acc (4.0/1.0)
+|   |   |   |    maint = low: acc (4.0/1.0)
+|   |    lug_boot = med
+|   |   |   buying = vhigh
+|   |   |   |    maint = vhigh: unacc (4.0)
+|   |   |   |    maint = high: unacc (4.0)
+|   |   |   |    maint = med: acc (4.0/1.0)
+|   |   |   |    maint = low: acc (4.0/1.0)
+|   |   |   buying = high
+|   |   |   |    maint = vhigh: unacc (4.0)
+|   |   |   |    maint = high: acc (4.0/1.0)
+|   |   |   |    maint = med: acc (4.0/1.0)
+|   |   |   |    maint = low: acc (4.0/1.0)
+|   |   |   buying = med: acc (16.0/5.0)
+|   |   |   buying = low
+|   |   |   |    maint = vhigh: acc (4.0/1.0)
+|   |   |   |    maint = high: acc (4.0)
+|   |   |   |    maint = med: good (4.0/1.0)
+|   |   |   |    maint = low: good (4.0/1.0)
+|   |    lug_boot = big
+|   |   |   buying = vhigh
+|   |   |   |    maint = vhigh: unacc (4.0)
+|   |   |   |    maint = high: unacc (4.0)
+|   |   |   |    maint = med: acc (4.0)
+|   |   |   |    maint = low: acc (4.0)
+|   |   |   buying = high
+|   |   |   |    maint = vhigh: unacc (4.0)
+|   |   |   |    maint = high: acc (4.0)
+|   |   |   |    maint = med: acc (4.0)
+|   |   |   |    maint = low: acc (4.0)
+|   |   |   buying = med
+|   |   |   |    maint = vhigh: acc (4.0)
+|   |   |   |    maint = high: acc (4.0)
+|   |   |   |    maint = med: acc (4.0)
+|   |   |   |    maint = low: good (4.0)
+|   |   |   buying = low
+|   |   |   |    maint = vhigh: acc (4.0)
+|   |   |   |    maint = high: acc (4.0)
+|   |   |   |    maint = med: good (4.0)
+|   |   |   |    maint = low: good (4.0)
+ safety = high
+|    persons = 2: unacc (192.0)
+|    persons = 4
+|   |   buying = vhigh
+|   |   |    maint = vhigh: unacc (12.0)
+|   |   |    maint = high: unacc (12.0)
+|   |   |    maint = med: acc (12.0)
+|   |   |    maint = low: acc (12.0)
+|   |   buying = high
+|   |   |    maint = vhigh: unacc (12.0)
+|   |   |    maint = high: acc (12.0)
+|   |   |    maint = med: acc (12.0)
+|   |   |    maint = low: acc (12.0)
+|   |   buying = med
+|   |   |    maint = vhigh: acc (12.0)
+|   |   |    maint = high: acc (12.0)
+|   |   |    maint = med
+|   |   |   |    lug_boot = small: acc (4.0)
+|   |   |   |    lug_boot = med: acc (4.0/2.0)
+|   |   |   |    lug_boot = big: vgood (4.0)
+|   |   |    maint = low
+|   |   |   |    lug_boot = small: good (4.0)
+|   |   |   |    lug_boot = med: vgood (4.0/2.0)
+|   |   |   |    lug_boot = big: vgood (4.0)
+|   |   buying = low
+|   |   |    maint = vhigh: acc (12.0)
+|   |   |    maint = high
+|   |   |   |    lug_boot = small: acc (4.0)
+|   |   |   |    lug_boot = med: acc (4.0/2.0)
+|   |   |   |    lug_boot = big: vgood (4.0)
+|   |   |    maint = med
+|   |   |   |    lug_boot = small: good (4.0)
+|   |   |   |    lug_boot = med: vgood (4.0/2.0)
+|   |   |   |    lug_boot = big: vgood (4.0)
+|   |   |    maint = low
+|   |   |   |    lug_boot = small: good (4.0)
+|   |   |   |    lug_boot = med: vgood (4.0/2.0)
+|   |   |   |    lug_boot = big: vgood (4.0)
+|    persons = more
+|   |   buying = vhigh
+|   |   |    maint = vhigh: unacc (12.0)
+|   |   |    maint = high: unacc (12.0)
+|   |   |    maint = med: acc (12.0/1.0)
+|   |   |    maint = low: acc (12.0/1.0)
+|   |   buying = high
+|   |   |    maint = vhigh: unacc (12.0)
+|   |   |    maint = high: acc (12.0/1.0)
+|   |   |    maint = med: acc (12.0/1.0)
+|   |   |    maint = low: acc (12.0/1.0)
+|   |   buying = med
+|   |   |    maint = vhigh: acc (12.0/1.0)
+|   |   |    maint = high: acc (12.0/1.0)
+|   |   |    maint = med
+|   |   |   |    lug_boot = small: acc (4.0/1.0)
+|   |   |   |    lug_boot = med: vgood (4.0/1.0)
+|   |   |   |    lug_boot = big: vgood (4.0)
+|   |   |    maint = low
+|   |   |   |    lug_boot = small: good (4.0/1.0)
+|   |   |   |    lug_boot = med: vgood (4.0/1.0)
+|   |   |   |    lug_boot = big: vgood (4.0)
+|   |   buying = low
+|   |   |    maint = vhigh: acc (12.0/1.0)
+|   |   |    maint = high
+|   |   |   |    lug_boot = small: acc (4.0/1.0)
+|   |   |   |    lug_boot = med: vgood (4.0/1.0)
+|   |   |   |    lug_boot = big: vgood (4.0)
+|   |   |    maint = med
+|   |   |   |    lug_boot = small: good (4.0/1.0)
+|   |   |   |    lug_boot = med: vgood (4.0/1.0)
+|   |   |   |    lug_boot = big: vgood (4.0)
+|   |   |    maint = low
+|   |   |   |    lug_boot = small: good (4.0/1.0)
+|   |   |   |    lug_boot = med: vgood (4.0/1.0)
+|   |   |   |    lug_boot = big: vgood (4.0)
+
+Number of Leaves  : 	131
+
+Size of the tree : 	182
+
+
+Time taken to build model: 0.03 seconds
+
+=== Evaluation on training set ===
+
+Time taken to test model on training data: 0.01 seconds
+
+=== Summary ===
+
+Correctly Classified Instances        1664               96.2963 %
+Incorrectly Classified Instances        64                3.7037 %
+Kappa statistic                          0.9198
+Mean absolute error                      0.0248
+Root mean squared error                  0.1114
+Relative absolute error                 10.8411 %
+Root relative squared error             32.9501 %
+Total Number of Instances             1728     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.977    0.019    0.992      0.977    0.984      0.948    0.997     0.998     unacc
+                 0.964    0.028    0.907      0.964    0.934      0.916    0.996     0.978     acc
+                 0.938    0.007    0.847      0.938    0.891      0.887    0.999     0.952     vgood
+                 0.739    0.003    0.911      0.739    0.816      0.814    0.997     0.916     good
+Weighted Avg.    0.963    0.020    0.964      0.963    0.963      0.933    0.997     0.989     
+
+=== Confusion Matrix ===
+
+    a    b    c    d   <-- classified as
+ 1182   25    0    3 |    a = unacc
+   10  370    2    2 |    b = acc
+    0    4   61    0 |    c = vgood
+    0    9    9   51 |    d = good
+

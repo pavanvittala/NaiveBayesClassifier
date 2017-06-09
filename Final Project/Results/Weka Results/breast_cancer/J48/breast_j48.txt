@@ -1,0 +1,89 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.J48 -C 0.25 -M 2
+Relation:     breast-cancer-wisconsin-preproc-weka.filters.unsupervised.attribute.NumericToNominal-Rfirst-last
+Instances:    699
+Attributes:   10
+              clump_thickness
+               cell_size_uniformity
+               cell_shape_uniformity
+               marginal_adhesion
+               single_epithelial_cell_size
+               bare_nuclei
+               bland_chromatin
+               normal_nucleoli
+               mitoses
+               class
+Test mode:    evaluate on training data
+
+=== Classifier model (full training set) ===
+
+J48 pruned tree
+------------------
+
+ cell_size_uniformity = 1: 2 (384.0/4.0)
+ cell_size_uniformity = 2: 2 (45.0/8.0)
+ cell_size_uniformity = 3
+|    bare_nuclei = 1: 2 (19.0)
+|    bare_nuclei = 2: 2 (5.0/1.0)
+|    bare_nuclei = 3
+|   |   clump_thickness = 1: 4 (0.0)
+|   |   clump_thickness = 2: 4 (0.0)
+|   |   clump_thickness = 3: 2 (2.0)
+|   |   clump_thickness = 4: 4 (0.0)
+|   |   clump_thickness = 5: 4 (3.0)
+|   |   clump_thickness = 6: 4 (0.0)
+|   |   clump_thickness = 7: 4 (1.0)
+|   |   clump_thickness = 8: 4 (0.0)
+|   |   clump_thickness = 9: 4 (0.0)
+|   |   clump_thickness = 10: 4 (0.0)
+|    bare_nuclei = 4: 4 (2.0)
+|    bare_nuclei = 5: 4 (4.0/1.0)
+|    bare_nuclei = 6: 2 (0.0)
+|    bare_nuclei = 7: 4 (1.0)
+|    bare_nuclei = 8: 4 (1.0)
+|    bare_nuclei = 9: 4 (1.0)
+|    bare_nuclei = 10: 4 (13.0/1.0)
+ cell_size_uniformity = 4: 4 (40.0/9.0)
+ cell_size_uniformity = 5: 4 (30.0)
+ cell_size_uniformity = 6: 4 (27.0/2.0)
+ cell_size_uniformity = 7: 4 (19.0/1.0)
+ cell_size_uniformity = 8: 4 (29.0/1.0)
+ cell_size_uniformity = 9: 4 (6.0/1.0)
+ cell_size_uniformity = 10: 4 (67.0)
+
+Number of Leaves  : 	28
+
+Size of the tree : 	31
+
+
+Time taken to build model: 0.01 seconds
+
+=== Evaluation on training set ===
+
+Time taken to test model on training data: 0 seconds
+
+=== Summary ===
+
+Correctly Classified Instances         670               95.8512 %
+Incorrectly Classified Instances        29                4.1488 %
+Kappa statistic                          0.9084
+Mean absolute error                      0.0703
+Root mean squared error                  0.1875
+Relative absolute error                 15.5627 %
+Root relative squared error             39.4555 %
+Total Number of Instances              699     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.965    0.054    0.971      0.965    0.968      0.908    0.983     0.985     2
+                 0.946    0.035    0.934      0.946    0.940      0.908    0.983     0.968     4
+Weighted Avg.    0.959    0.047    0.959      0.959    0.959      0.908    0.983     0.979     
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 442  16 |   a = 2
+  13 228 |   b = 4
+

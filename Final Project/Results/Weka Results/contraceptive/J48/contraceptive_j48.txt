@@ -1,0 +1,323 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.J48 -C 0.25 -M 2
+Relation:     cmc-weka.filters.unsupervised.attribute.NumericToNominal-R2,3,5,6,7,8,9,10
+Instances:    1473
+Attributes:   10
+              wife_age
+               wife_education
+               husband_education
+               num_child_born
+               wife_religion
+               wife_working
+               husband_occupation
+               standard_of_living_index
+               media_exposure
+               contraceptive_method
+Test mode:    evaluate on training data
+
+=== Classifier model (full training set) ===
+
+J48 pruned tree
+------------------
+
+ num_child_born <= 0: 1 (97.0/2.0)
+ num_child_born > 0
+|   wife_age <= 37
+|   |    wife_education = 1
+|   |   |    num_child_born <= 6
+|   |   |   |    husband_education = 1: 1 (8.0/3.0)
+|   |   |   |    husband_education = 2: 3 (25.0/7.0)
+|   |   |   |    husband_education = 3: 3 (16.0/6.0)
+|   |   |   |    husband_education = 4
+|   |   |   |   |    num_child_born <= 2: 1 (6.0/1.0)
+|   |   |   |   |    num_child_born > 2: 3 (3.0)
+|   |   |    num_child_born > 6
+|   |   |   |   wife_age <= 32: 1 (2.0)
+|   |   |   |   wife_age > 32: 2 (2.0)
+|   |    wife_education = 2
+|   |   |    num_child_born <= 2
+|   |   |   |    wife_working = 0
+|   |   |   |   |   wife_age <= 23: 3 (2.0)
+|   |   |   |   |   wife_age > 23: 1 (16.0/3.0)
+|   |   |   |    wife_working = 1
+|   |   |   |   |    husband_occupation = 1
+|   |   |   |   |   |    num_child_born <= 1: 1 (4.0/1.0)
+|   |   |   |   |   |    num_child_born > 1
+|   |   |   |   |   |   |   wife_age <= 25: 1 (2.0/1.0)
+|   |   |   |   |   |   |   wife_age > 25: 2 (2.0)
+|   |   |   |   |    husband_occupation = 2
+|   |   |   |   |   |    num_child_born <= 1: 1 (12.0/3.0)
+|   |   |   |   |   |    num_child_born > 1: 3 (8.0/2.0)
+|   |   |   |   |    husband_occupation = 3: 1 (55.0/22.0)
+|   |   |   |   |    husband_occupation = 4: 3 (1.0)
+|   |   |    num_child_born > 2
+|   |   |   |   wife_age <= 24: 1 (15.0/5.0)
+|   |   |   |   wife_age > 24
+|   |   |   |   |    husband_education = 1: 2 (3.0/1.0)
+|   |   |   |   |    husband_education = 2
+|   |   |   |   |   |    standard_of_living_index = 1
+|   |   |   |   |   |   |    wife_working = 0: 1 (2.0)
+|   |   |   |   |   |   |    wife_working = 1: 3 (5.0/1.0)
+|   |   |   |   |   |    standard_of_living_index = 2
+|   |   |   |   |   |   |    num_child_born <= 7: 3 (4.0)
+|   |   |   |   |   |   |    num_child_born > 7: 1 (2.0/1.0)
+|   |   |   |   |   |    standard_of_living_index = 3
+|   |   |   |   |   |   |   wife_age <= 33: 3 (9.0/4.0)
+|   |   |   |   |   |   |   wife_age > 33: 1 (2.0)
+|   |   |   |   |   |    standard_of_living_index = 4
+|   |   |   |   |   |   |    husband_occupation = 1: 2 (0.0)
+|   |   |   |   |   |   |    husband_occupation = 2: 3 (3.0/1.0)
+|   |   |   |   |   |   |    husband_occupation = 3: 2 (5.0/1.0)
+|   |   |   |   |   |   |    husband_occupation = 4: 2 (0.0)
+|   |   |   |   |    husband_education = 3
+|   |   |   |   |   |    media_exposure = 0
+|   |   |   |   |   |   |    wife_religion = 0: 1 (2.0)
+|   |   |   |   |   |   |    wife_religion = 1: 3 (44.0/15.0)
+|   |   |   |   |   |    media_exposure = 1
+|   |   |   |   |   |   |   wife_age <= 34: 2 (2.0/1.0)
+|   |   |   |   |   |   |   wife_age > 34: 1 (2.0)
+|   |   |   |   |    husband_education = 4
+|   |   |   |   |   |    wife_religion = 0: 2 (2.0)
+|   |   |   |   |   |    wife_religion = 1: 3 (40.0/12.0)
+|   |    wife_education = 3
+|   |   |    num_child_born <= 2
+|   |   |   |   wife_age <= 30
+|   |   |   |   |    husband_education = 1: 2 (2.0)
+|   |   |   |   |    husband_education = 2
+|   |   |   |   |   |   wife_age <= 24: 3 (5.0/1.0)
+|   |   |   |   |   |   wife_age > 24: 1 (2.0)
+|   |   |   |   |    husband_education = 3
+|   |   |   |   |   |   wife_age <= 25
+|   |   |   |   |   |   |    wife_working = 0: 1 (5.0/1.0)
+|   |   |   |   |   |   |    wife_working = 1
+|   |   |   |   |   |   |   |    num_child_born <= 1
+|   |   |   |   |   |   |   |   |   wife_age <= 24: 3 (14.0/2.0)
+|   |   |   |   |   |   |   |   |   wife_age > 24: 1 (6.0/2.0)
+|   |   |   |   |   |   |   |    num_child_born > 1: 1 (14.0/7.0)
+|   |   |   |   |   |   wife_age > 25
+|   |   |   |   |   |   |   wife_age <= 28: 2 (8.0/3.0)
+|   |   |   |   |   |   |   wife_age > 28: 3 (4.0/1.0)
+|   |   |   |   |    husband_education = 4
+|   |   |   |   |   |    standard_of_living_index = 1: 1 (5.0/1.0)
+|   |   |   |   |   |    standard_of_living_index = 2
+|   |   |   |   |   |   |    husband_occupation = 1: 3 (1.0)
+|   |   |   |   |   |   |    husband_occupation = 2: 1 (4.0)
+|   |   |   |   |   |   |    husband_occupation = 3
+|   |   |   |   |   |   |   |   wife_age <= 20: 1 (3.0/1.0)
+|   |   |   |   |   |   |   |   wife_age > 20: 3 (2.0)
+|   |   |   |   |   |   |    husband_occupation = 4: 1 (0.0)
+|   |   |   |   |   |    standard_of_living_index = 3
+|   |   |   |   |   |   |    wife_religion = 0: 2 (3.0/1.0)
+|   |   |   |   |   |   |    wife_religion = 1
+|   |   |   |   |   |   |   |    wife_working = 0: 1 (2.0)
+|   |   |   |   |   |   |   |    wife_working = 1
+|   |   |   |   |   |   |   |   |    husband_occupation = 1
+|   |   |   |   |   |   |   |   |   |   wife_age <= 26: 3 (2.0)
+|   |   |   |   |   |   |   |   |   |   wife_age > 26: 1 (3.0/1.0)
+|   |   |   |   |   |   |   |   |    husband_occupation = 2
+|   |   |   |   |   |   |   |   |   |   wife_age <= 22: 1 (3.0)
+|   |   |   |   |   |   |   |   |   |   wife_age > 22: 3 (2.0)
+|   |   |   |   |   |   |   |   |    husband_occupation = 3: 3 (12.0/6.0)
+|   |   |   |   |   |   |   |   |    husband_occupation = 4: 3 (0.0)
+|   |   |   |   |   |    standard_of_living_index = 4
+|   |   |   |   |   |   |    wife_working = 0: 3 (5.0)
+|   |   |   |   |   |   |    wife_working = 1
+|   |   |   |   |   |   |   |    wife_religion = 0: 3 (2.0)
+|   |   |   |   |   |   |   |    wife_religion = 1: 2 (12.0/7.0)
+|   |   |   |   wife_age > 30: 1 (18.0/4.0)
+|   |   |    num_child_born > 2
+|   |   |   |    husband_occupation = 1
+|   |   |   |   |    standard_of_living_index = 1: 1 (1.0)
+|   |   |   |   |    standard_of_living_index = 2: 2 (5.0/2.0)
+|   |   |   |   |    standard_of_living_index = 3: 2 (12.0/4.0)
+|   |   |   |   |    standard_of_living_index = 4
+|   |   |   |   |   |    num_child_born <= 3: 2 (6.0/2.0)
+|   |   |   |   |   |    num_child_born > 3
+|   |   |   |   |   |   |   wife_age <= 30: 1 (2.0)
+|   |   |   |   |   |   |   wife_age > 30: 3 (8.0/1.0)
+|   |   |   |    husband_occupation = 2
+|   |   |   |   |    num_child_born <= 5: 3 (40.0/16.0)
+|   |   |   |   |    num_child_born > 5: 1 (10.0/3.0)
+|   |   |   |    husband_occupation = 3
+|   |   |   |   |   wife_age <= 31: 3 (43.0/10.0)
+|   |   |   |   |   wife_age > 31
+|   |   |   |   |   |    num_child_born <= 6
+|   |   |   |   |   |   |    husband_education = 1: 2 (0.0)
+|   |   |   |   |   |   |    husband_education = 2: 2 (2.0/1.0)
+|   |   |   |   |   |   |    husband_education = 3
+|   |   |   |   |   |   |   |    num_child_born <= 3: 1 (2.0/1.0)
+|   |   |   |   |   |   |   |    num_child_born > 3: 2 (7.0/1.0)
+|   |   |   |   |   |   |    husband_education = 4: 3 (10.0/4.0)
+|   |   |   |   |   |    num_child_born > 6
+|   |   |   |   |   |   |   wife_age <= 35: 3 (3.0)
+|   |   |   |   |   |   |   wife_age > 35: 1 (3.0/1.0)
+|   |   |   |    husband_occupation = 4: 3 (0.0)
+|   |    wife_education = 4
+|   |   |    media_exposure = 0
+|   |   |   |    num_child_born <= 2
+|   |   |   |   |    husband_occupation = 1
+|   |   |   |   |   |    wife_working = 0
+|   |   |   |   |   |   |    wife_religion = 0
+|   |   |   |   |   |   |   |    standard_of_living_index = 1: 2 (0.0)
+|   |   |   |   |   |   |   |    standard_of_living_index = 2: 2 (0.0)
+|   |   |   |   |   |   |   |    standard_of_living_index = 3: 3 (3.0/1.0)
+|   |   |   |   |   |   |   |    standard_of_living_index = 4: 2 (4.0/1.0)
+|   |   |   |   |   |   |    wife_religion = 1
+|   |   |   |   |   |   |   |    num_child_born <= 1
+|   |   |   |   |   |   |   |   |   wife_age <= 27: 2 (6.0/3.0)
+|   |   |   |   |   |   |   |   |   wife_age > 27: 1 (3.0)
+|   |   |   |   |   |   |   |    num_child_born > 1
+|   |   |   |   |   |   |   |   |    standard_of_living_index = 1: 2 (0.0)
+|   |   |   |   |   |   |   |   |    standard_of_living_index = 2: 2 (0.0)
+|   |   |   |   |   |   |   |   |    standard_of_living_index = 3
+|   |   |   |   |   |   |   |   |   |   wife_age <= 30: 2 (5.0)
+|   |   |   |   |   |   |   |   |   |   wife_age > 30: 1 (2.0/1.0)
+|   |   |   |   |   |   |   |   |    standard_of_living_index = 4: 3 (9.0/5.0)
+|   |   |   |   |   |    wife_working = 1
+|   |   |   |   |   |   |    num_child_born <= 1
+|   |   |   |   |   |   |   |   wife_age <= 24: 2 (17.0/7.0)
+|   |   |   |   |   |   |   |   wife_age > 24: 1 (25.0/12.0)
+|   |   |   |   |   |   |    num_child_born > 1
+|   |   |   |   |   |   |   |    wife_religion = 0
+|   |   |   |   |   |   |   |   |   wife_age <= 29: 2 (3.0)
+|   |   |   |   |   |   |   |   |   wife_age > 29: 1 (6.0/3.0)
+|   |   |   |   |   |   |   |    wife_religion = 1
+|   |   |   |   |   |   |   |   |   wife_age <= 28: 3 (13.0/6.0)
+|   |   |   |   |   |   |   |   |   wife_age > 28: 1 (11.0/5.0)
+|   |   |   |   |    husband_occupation = 2: 3 (50.0/24.0)
+|   |   |   |   |    husband_occupation = 3
+|   |   |   |   |   |    wife_working = 0
+|   |   |   |   |   |   |    num_child_born <= 1: 1 (6.0/3.0)
+|   |   |   |   |   |   |    num_child_born > 1
+|   |   |   |   |   |   |   |   wife_age <= 31: 3 (4.0/1.0)
+|   |   |   |   |   |   |   |   wife_age > 31: 2 (4.0/1.0)
+|   |   |   |   |   |    wife_working = 1: 3 (39.0/17.0)
+|   |   |   |   |    husband_occupation = 4: 3 (1.0)
+|   |   |   |    num_child_born > 2
+|   |   |   |   |   wife_age <= 28
+|   |   |   |   |   |    husband_occupation = 1
+|   |   |   |   |   |   |    standard_of_living_index = 1: 1 (0.0)
+|   |   |   |   |   |   |    standard_of_living_index = 2: 1 (1.0)
+|   |   |   |   |   |   |    standard_of_living_index = 3: 2 (2.0)
+|   |   |   |   |   |   |    standard_of_living_index = 4: 1 (8.0/2.0)
+|   |   |   |   |   |    husband_occupation = 2: 1 (4.0/2.0)
+|   |   |   |   |   |    husband_occupation = 3: 3 (12.0/2.0)
+|   |   |   |   |   |    husband_occupation = 4: 3 (0.0)
+|   |   |   |   |   wife_age > 28
+|   |   |   |   |   |    standard_of_living_index = 1: 2 (1.0)
+|   |   |   |   |   |    standard_of_living_index = 2
+|   |   |   |   |   |   |   wife_age <= 33: 2 (3.0)
+|   |   |   |   |   |   |   wife_age > 33: 1 (4.0/2.0)
+|   |   |   |   |   |    standard_of_living_index = 3: 2 (24.0/11.0)
+|   |   |   |   |   |    standard_of_living_index = 4
+|   |   |   |   |   |   |    wife_working = 0
+|   |   |   |   |   |   |   |   wife_age <= 33: 3 (13.0/3.0)
+|   |   |   |   |   |   |   |   wife_age > 33: 2 (13.0/5.0)
+|   |   |   |   |   |   |    wife_working = 1
+|   |   |   |   |   |   |   |    husband_occupation = 1
+|   |   |   |   |   |   |   |   |    wife_religion = 0: 3 (5.0/2.0)
+|   |   |   |   |   |   |   |   |    wife_religion = 1: 2 (35.0/18.0)
+|   |   |   |   |   |   |   |    husband_occupation = 2
+|   |   |   |   |   |   |   |   |    num_child_born <= 3
+|   |   |   |   |   |   |   |   |   |    wife_religion = 0: 2 (5.0/2.0)
+|   |   |   |   |   |   |   |   |   |    wife_religion = 1: 3 (4.0)
+|   |   |   |   |   |   |   |   |    num_child_born > 3: 2 (8.0/1.0)
+|   |   |   |   |   |   |   |    husband_occupation = 3
+|   |   |   |   |   |   |   |   |    wife_religion = 0: 3 (5.0/1.0)
+|   |   |   |   |   |   |   |   |    wife_religion = 1: 2 (7.0/2.0)
+|   |   |   |   |   |   |   |    husband_occupation = 4: 3 (1.0)
+|   |   |    media_exposure = 1: 3 (3.0)
+|   wife_age > 37
+|   |    media_exposure = 0
+|   |   |    num_child_born <= 1: 1 (35.0/3.0)
+|   |   |    num_child_born > 1
+|   |   |   |    wife_education = 1: 1 (42.0/9.0)
+|   |   |   |    wife_education = 2: 1 (55.0/18.0)
+|   |   |   |    wife_education = 3
+|   |   |   |   |    wife_working = 0
+|   |   |   |   |   |    husband_occupation = 1: 3 (5.0/1.0)
+|   |   |   |   |   |    husband_occupation = 2: 2 (3.0/1.0)
+|   |   |   |   |   |    husband_occupation = 3
+|   |   |   |   |   |   |    num_child_born <= 5: 3 (3.0)
+|   |   |   |   |   |   |    num_child_born > 5: 1 (2.0/1.0)
+|   |   |   |   |   |    husband_occupation = 4: 3 (0.0)
+|   |   |   |   |    wife_working = 1: 1 (64.0/27.0)
+|   |   |   |    wife_education = 4
+|   |   |   |   |   wife_age <= 48
+|   |   |   |   |   |    husband_education = 1: 2 (0.0)
+|   |   |   |   |   |    husband_education = 2: 1 (1.0)
+|   |   |   |   |   |    husband_education = 3
+|   |   |   |   |   |   |    husband_occupation = 1: 2 (3.0/1.0)
+|   |   |   |   |   |   |    husband_occupation = 2: 2 (1.0)
+|   |   |   |   |   |   |    husband_occupation = 3: 3 (3.0)
+|   |   |   |   |   |   |    husband_occupation = 4: 3 (0.0)
+|   |   |   |   |   |    husband_education = 4
+|   |   |   |   |   |   |    num_child_born <= 2
+|   |   |   |   |   |   |   |    wife_religion = 0: 3 (4.0/1.0)
+|   |   |   |   |   |   |   |    wife_religion = 1
+|   |   |   |   |   |   |   |   |   wife_age <= 38: 3 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   wife_age > 38: 1 (6.0/2.0)
+|   |   |   |   |   |   |    num_child_born > 2
+|   |   |   |   |   |   |   |    wife_working = 0: 2 (27.0/5.0)
+|   |   |   |   |   |   |   |    wife_working = 1
+|   |   |   |   |   |   |   |   |   wife_age <= 39: 2 (16.0/3.0)
+|   |   |   |   |   |   |   |   |   wife_age > 39
+|   |   |   |   |   |   |   |   |   |    num_child_born <= 6
+|   |   |   |   |   |   |   |   |   |   |   wife_age <= 46
+|   |   |   |   |   |   |   |   |   |   |   |    husband_occupation = 1: 2 (41.0/16.0)
+|   |   |   |   |   |   |   |   |   |   |   |    husband_occupation = 2
+|   |   |   |   |   |   |   |   |   |   |   |   |   wife_age <= 42: 3 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   wife_age > 42: 1 (6.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |    husband_occupation = 3
+|   |   |   |   |   |   |   |   |   |   |   |   |   wife_age <= 41: 1 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   wife_age > 41: 2 (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |    husband_occupation = 4: 2 (0.0)
+|   |   |   |   |   |   |   |   |   |   |   wife_age > 46
+|   |   |   |   |   |   |   |   |   |   |   |    wife_religion = 0: 2 (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |    wife_religion = 1: 1 (6.0/2.0)
+|   |   |   |   |   |   |   |   |   |    num_child_born > 6
+|   |   |   |   |   |   |   |   |   |   |    num_child_born <= 9: 2 (11.0/3.0)
+|   |   |   |   |   |   |   |   |   |   |    num_child_born > 9: 3 (3.0/1.0)
+|   |   |   |   |   wife_age > 48
+|   |   |   |   |   |    num_child_born <= 8: 1 (6.0)
+|   |   |   |   |   |    num_child_born > 8: 2 (2.0/1.0)
+|   |    media_exposure = 1: 1 (48.0/4.0)
+
+Number of Leaves  : 	157
+
+Size of the tree : 	263
+
+
+Time taken to build model: 0.04 seconds
+
+=== Evaluation on training set ===
+
+Time taken to test model on training data: 0 seconds
+
+=== Summary ===
+
+Correctly Classified Instances        1048               71.1473 %
+Incorrectly Classified Instances       425               28.8527 %
+Kappa statistic                          0.5519
+Mean absolute error                      0.2647
+Root mean squared error                  0.3638
+Relative absolute error                 61.4378 %
+Root relative squared error             78.3848 %
+Total Number of Instances             1473     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.781    0.192    0.752      0.781    0.766      0.586    0.874     0.842     1
+                 0.643    0.094    0.667      0.643    0.654      0.556    0.882     0.701     2
+                 0.671    0.162    0.687      0.671    0.679      0.512    0.849     0.742     3
+Weighted Avg.    0.711    0.159    0.710      0.711    0.711      0.554    0.867     0.776     
+
+=== Confusion Matrix ===
+
+   a   b   c   <-- classified as
+ 491  35 103 |   a = 1
+  66 214  53 |   b = 2
+  96  72 343 |   c = 3
+

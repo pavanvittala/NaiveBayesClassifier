@@ -1,0 +1,92 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.J48 -C 0.25 -M 2
+Relation:     ad-weka.filters.unsupervised.attribute.StringToNominal-R1-3-weka.filters.unsupervised.attribute.StringToNominal-Rfirst-last-weka.filters.unsupervised.attribute.NumericToNominal-R4-last
+Instances:    3279
+Attributes:   1559
+              [list of attributes omitted]
+Test mode:    evaluate on training data
+
+=== Classifier model (full training set) ===
+
+J48 pruned tree
+------------------
+
+ url*ads = 0
+|    ancurl*click = 0
+|   |    ancurl*http+www = 0
+|   |   |    url*doubleclick.net = 0
+|   |   |   |    alt*visit+our = 0
+|   |   |   |   |    ancurl*adclick = 0
+|   |   |   |   |   |    origurl*home.netscape.com = 0
+|   |   |   |   |   |   |    origurl*jun = 0
+|   |   |   |   |   |   |   |    ancurl*url+http = 0
+|   |   |   |   |   |   |   |   |    url*memberbanners = 0
+|   |   |   |   |   |   |   |   |   |    origurl*zdnet.com = 0
+|   |   |   |   |   |   |   |   |   |   |    ancurl*n+a = 0
+|   |   |   |   |   |   |   |   |   |   |   |    ancurl*plx = 0
+|   |   |   |   |   |   |   |   |   |   |   |   |    ancurl*redirect+cgi = 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |    alt*ad = 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |    ancurl*ad = 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |    alt*click+here = 0: nonad. (2850.0/64.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |    alt*click+here = 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |    alt*to = 0: ad. (17.0/5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |    alt*to = 1: nonad. (15.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |    ancurl*ad = 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |    url*ad+gif = 0: ad. (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |    url*ad+gif = 1: nonad. (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |    alt*ad = 1: ad. (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |    ancurl*redirect+cgi = 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |    origurl*messier = 0: ad. (8.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |    origurl*messier = 1: nonad. (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |    ancurl*plx = 1: ad. (2.0)
+|   |   |   |   |   |   |   |   |   |   |    ancurl*n+a = 1: ad. (2.0)
+|   |   |   |   |   |   |   |   |   |    origurl*zdnet.com = 1: ad. (10.0)
+|   |   |   |   |   |   |   |   |    url*memberbanners = 1: ad. (10.0/1.0)
+|   |   |   |   |   |   |   |    ancurl*url+http = 1: ad. (3.0)
+|   |   |   |   |   |   |    origurl*jun = 1: ad. (4.0)
+|   |   |   |   |   |    origurl*home.netscape.com = 1: ad. (5.0)
+|   |   |   |   |    ancurl*adclick = 1: ad. (19.0)
+|   |   |   |    alt*visit+our = 1: ad. (9.0)
+|   |   |    url*doubleclick.net = 1: ad. (15.0)
+|   |    ancurl*http+www = 1: ad. (43.0)
+|    ancurl*click = 1: ad. (103.0/2.0)
+ url*ads = 1
+|    origurl*www.news-observer.com = 0: ad. (149.0/4.0)
+|    origurl*www.news-observer.com = 1: nonad. (3.0/1.0)
+
+Number of Leaves  : 	22
+
+Size of the tree : 	43
+
+
+Time taken to build model: 19.8 seconds
+
+=== Evaluation on training set ===
+
+Time taken to test model on training data: 0.03 seconds
+
+=== Summary ===
+
+Correctly Classified Instances        3200               97.5907 %
+Incorrectly Classified Instances        79                2.4093 %
+Kappa statistic                          0.8949
+Mean absolute error                      0.0459
+Root mean squared error                  0.1514
+Relative absolute error                 19.0366 %
+Root relative squared error             43.6453 %
+Total Number of Instances             3279     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.856    0.005    0.968      0.856    0.909      0.897    0.929     0.872     ad.
+                 0.995    0.144    0.977      0.995    0.986      0.897    0.929     0.977     nonad.
+Weighted Avg.    0.976    0.124    0.976      0.976    0.975      0.897    0.929     0.963     
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+  393   66 |    a = ad.
+   13 2807 |    b = nonad.
+

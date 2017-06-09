@@ -1,0 +1,18 @@
+buying, maint, doors, persons, lug_boot, safety, quality
+ordinal, ordinal, nominal, nominal, ordinal, ordinal, nominal
+4, 4, 4, 3, 3, 3, 4
+{vhigh, high, med, low}; {vhigh, high, med, low}; {2, 3, 4, 5more}; {2, 4, more}; {small, med, big}; {low, med, high}; {unacc, acc, good, vgood}
+vhigh,vhigh,2,2,small,med,unacc
+vhigh,vhigh,2,2,big,high,unacc
+low,low,5more,more,med,med,good
+low,low,5more,more,med,high,vgood
+low,low,5more,more,big,low,unacc
+low,low,5more,more,big,med,good
+low,low,5more,more,big,high,vgood
+med,vhigh,5more,4,med,med,acc
+med,vhigh,5more,4,med,high,acc
+med,vhigh,5more,4,big,med,acc
+med,vhigh,5more,4,big,high,acc
+high,high,5more,4,small,high,acc
+high,high,5more,4,med,med,acc
+high,high,5more,4,med,high,acc

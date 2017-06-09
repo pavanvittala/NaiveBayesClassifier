@@ -1,0 +1,59 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.lazy.IBk -K 1 -W 0 -A "weka.core.neighboursearch.LinearNNSearch -A \"weka.core.EuclideanDistance -R first-last\""
+Relation:     adult
+Instances:    32561
+Attributes:   15
+              age
+               workclass
+               fnlwgt
+               education
+               education-num
+               marital-status
+               occupation
+               relationship
+               race
+               sex
+               capital-gain
+               capital-loss
+               hours-per-week
+               native-country
+               salary
+Test mode:    evaluate on training data
+
+=== Classifier model (full training set) ===
+
+IB1 instance-based classifier
+using 1 nearest neighbour(s) for classification
+
+
+Time taken to build model: 0.01 seconds
+
+=== Evaluation on training set ===
+
+Time taken to test model on training data: 53.45 seconds
+
+=== Summary ===
+
+Correctly Classified Instances       32560               99.9969 %
+Incorrectly Classified Instances         1                0.0031 %
+Kappa statistic                          0.9999
+Mean absolute error                      0.0001
+Root mean squared error                  0.0039
+Relative absolute error                  0.0168 %
+Root relative squared error              0.9165 %
+Total Number of Instances            32561     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 1.000    0.000    1.000      1.000    1.000      1.000    1.000     1.000      <=50K
+                 1.000    0.000    1.000      1.000    1.000      1.000    1.000     1.000      >50K
+Weighted Avg.    1.000    0.000    1.000      1.000    1.000      1.000    1.000     1.000     
+
+=== Confusion Matrix ===
+
+     a     b   <-- classified as
+ 24720     0 |     a =  <=50K
+     1  7840 |     b =  >50K
+

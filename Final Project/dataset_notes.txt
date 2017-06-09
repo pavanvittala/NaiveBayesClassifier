@@ -1,0 +1,11 @@
+1. Adult - OK - 83% - Weka has 84% 
+2. Car evaluation  - OK - 80%
+3. Connect-4 - OK - 54% - Weka has 72%
+4. Breast Cancer (Diagnostic) - OK - 97% - Weka has 97%
+	-Preprocessing: removed ID attribute because it doesn't affect whether or not a cell is cancerous 
+5. Contraceptive method choice - OK - 49% - Weka has 53%
+6. Cover Type -  OK - 54% - Weka has 65%
+7. Abalone - OK - 16.1% - Weka has 25%
+8. Bank Marketing - OK - 79% - Weka has 88%
+9. Poker Hand - BAD - 14.6% - Weka has 49%
+10. Internet Advertisements Data Set - OK - 97% - Weka has 97%

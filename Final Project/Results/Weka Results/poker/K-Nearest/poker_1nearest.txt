@@ -1,0 +1,71 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.lazy.IBk -K 1 -W 0 -A "weka.core.neighboursearch.LinearNNSearch -A \"weka.core.EuclideanDistance -R first-last\""
+Relation:     poker-hand-training-true-weka.filters.unsupervised.attribute.NumericToNominal-Rfirst-last
+Instances:    25010
+Attributes:   11
+              S1
+               C1
+               S2
+               C2
+               S3
+               C3
+               S4
+               C4
+               S5
+               C5
+               poker_hand
+Test mode:    evaluate on training data
+
+=== Classifier model (full training set) ===
+
+IB1 instance-based classifier
+using 1 nearest neighbour(s) for classification
+
+
+Time taken to build model: 0.01 seconds
+
+=== Evaluation on training set ===
+
+Time taken to test model on training data: 38.24 seconds
+
+=== Summary ===
+
+Correctly Classified Instances       25010              100      %
+Incorrectly Classified Instances         0                0      %
+Kappa statistic                          1     
+Mean absolute error                      0.0001
+Root mean squared error                  0.0001
+Relative absolute error                  0.0633 %
+Root relative squared error              0.0503 %
+Total Number of Instances            25010     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 1.000    0.000    1.000      1.000    1.000      1.000    1.000     1.000     0
+                 1.000    0.000    1.000      1.000    1.000      1.000    1.000     1.000     1
+                 1.000    0.000    1.000      1.000    1.000      1.000    1.000     1.000     2
+                 1.000    0.000    1.000      1.000    1.000      1.000    1.000     1.000     3
+                 1.000    0.000    1.000      1.000    1.000      1.000    1.000     1.000     4
+                 1.000    0.000    1.000      1.000    1.000      1.000    1.000     1.000     5
+                 1.000    0.000    1.000      1.000    1.000      1.000    1.000     1.000     6
+                 1.000    0.000    1.000      1.000    1.000      1.000    1.000     1.000     7
+                 1.000    0.000    1.000      1.000    1.000      1.000    1.000     1.000     8
+                 1.000    0.000    1.000      1.000    1.000      1.000    1.000     1.000     9
+Weighted Avg.    1.000    0.000    1.000      1.000    1.000      1.000    1.000     1.000     
+
+=== Confusion Matrix ===
+
+     a     b     c     d     e     f     g     h     i     j   <-- classified as
+ 12493     0     0     0     0     0     0     0     0     0 |     a = 0
+     0 10599     0     0     0     0     0     0     0     0 |     b = 1
+     0     0  1206     0     0     0     0     0     0     0 |     c = 2
+     0     0     0   513     0     0     0     0     0     0 |     d = 3
+     0     0     0     0    93     0     0     0     0     0 |     e = 4
+     0     0     0     0     0    54     0     0     0     0 |     f = 5
+     0     0     0     0     0     0    36     0     0     0 |     g = 6
+     0     0     0     0     0     0     0     6     0     0 |     h = 7
+     0     0     0     0     0     0     0     0     5     0 |     i = 8
+     0     0     0     0     0     0     0     0     0     5 |     j = 9
+
