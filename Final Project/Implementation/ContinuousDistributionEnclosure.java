@@ -1,3 +1,8 @@
+/**
+ * ContinuousAttribute -> Class/Tag -> CDE (mean, variance)
+ * @author pvittala
+ *
+ */
 public class ContinuousDistributionEnclosure {
 	double sampleMean;
 	double sampleVariance;
